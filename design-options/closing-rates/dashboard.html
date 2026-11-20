@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Closing Rates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--mast:#0B4A8B;--mast-2:#0E5AA7;--ground:#F7F7F4;--sheet:#FFFFFF;--ink:#111111;--ink-2:#55595E;--rule:#DEDDD7;--up:#1E7B4A;--down:#C0392B;--wait:#9A6400}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:14px/1.4 'Source Sans 3',sans-serif;color:var(--ink);background:var(--ground);font-variant-numeric:tabular-nums}
+::selection{background:color-mix(in srgb,var(--mast-2) 19%,#fff)}
+.mast{height:56px;background:var(--mast);color:#fff;display:flex;align-items:center;gap:6px;padding:0 28px}
+.logo{font:800 22px 'Libre Franklin';letter-spacing:-.02em;margin-right:22px}
+.mast a{color:color-mix(in srgb,var(--mast-2) 16%,#fff);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:6px}
+.mast a.on{background:#fff;color:var(--mast)}
+.mast .co{margin-left:auto;font-weight:600;padding:7px 12px;border:1px solid color-mix(in srgb,var(--mast-2) 80%,var(--rule));border-radius:6px}
+.mast .me{width:32px;height:32px;border-radius:50%;background:#fff;color:var(--mast);display:grid;place-items:center;font-weight:700;margin-left:10px}
+.sub{display:flex;align-items:baseline;gap:14px;padding:20px 28px 14px}
+.sub h1{font:700 26px 'Libre Franklin';letter-spacing:-.01em}
+.sub p{color:var(--ink-2)}
+.sub .per{margin-left:auto;display:flex;gap:2px;background:#ECEBE6;border-radius:7px;padding:3px}
+.sub .per span{padding:5px 12px;border-radius:5px;font-weight:600;color:var(--ink-2)}
+.sub .per span.on{background:var(--sheet);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.rates{margin:0 28px;display:grid;grid-template-columns:repeat(6,1fr);background:var(--sheet);border:1px solid var(--rule);border-radius:8px}
+.rate{padding:14px 18px;border-left:1px solid var(--rule)}
+.rate:first-child{border-left:0}
+.rate span{font-weight:600;color:var(--ink-2);font-size:13px}
+.rate strong{display:block;font:700 27px/1.1 'Libre Franklin';letter-spacing:-.02em;margin:6px 0 4px}
+.chg{font-weight:700;font-size:13px;display:flex;align-items:center;gap:5px}
+.chg i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}
+.chg.u{color:var(--up)}.chg.u i{border-bottom:7px solid var(--up)}
+.chg.d{color:var(--down)}.chg.d i{border-top:7px solid var(--down)}
+.chg em{font-style:normal;font-weight:500;color:var(--ink-2)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin:18px 28px 0}
+.p{background:var(--sheet);border:1px solid var(--rule);border-radius:8px;padding:16px 18px}
+.p h2{font:700 15px 'Libre Franklin';display:flex;align-items:baseline;gap:10px;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:10px}
+.p h2 small{font:500 13px 'Source Sans 3';color:var(--ink-2);margin-left:auto}
+.c7{grid-column:span 7}.c5{grid-column:span 5}.c4{grid-column:span 4}
+.chart{display:grid;grid-template-columns:44px 1fr;height:196px}
+.axis{display:flex;flex-direction:column;justify-content:space-between;color:var(--ink-2);font-size:12px;padding-bottom:20px}
+.bars{position:relative;display:flex;align-items:flex-end;gap:7px;border-bottom:1px solid var(--ink);background:repeating-linear-gradient(to top,transparent 0 43px,#EEEDE8 43px 44px);padding:0 4px}
+.bars div{flex:1;background:var(--mast);border-radius:2px 2px 0 0;position:relative}
+.bars div.sun{background:color-mix(in srgb,var(--mast) 26%,#fff)}
+.bars div.today{background:repeating-linear-gradient(45deg,var(--mast) 0 3px,color-mix(in srgb,var(--mast-2) 66%,var(--ground)) 3px 6px)}
+.days{display:flex;gap:7px;padding:4px 4px 0 48px;color:var(--ink-2);font-size:11px}
+.days span{flex:1;text-align:center}
+table{width:100%;border-collapse:collapse}
+td,th{padding:7px 0;border-bottom:1px solid #EFEEE9;text-align:left}
+th{font-size:12px;font-weight:600;color:var(--ink-2);text-transform:uppercase;letter-spacing:.04em}
+.n{text-align:right}
+.ok{color:var(--up);font-weight:700}.bad{color:var(--down);font-weight:700}.wait{color:var(--wait);font-weight:700}
+.hbar{height:8px;background:#EEEDE8;border-radius:4px;overflow:hidden;margin-top:4px}
+.hbar b{display:block;height:100%;background:var(--ink)}
+.todo li{list-style:none;display:flex;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px solid #EFEEE9}
+.todo li b{font:700 18px 'Libre Franklin';min-width:26px}
+.todo li a{margin-left:auto;color:var(--mast);font-weight:700;text-decoration:none}
+</style>
+<script src="../palette-switcher.js" data-design="closing-rates"></script></head><body>
+<header class="mast"><span class="logo">E-ACT 360</span><a class="on" href="dashboard.html">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a><a href="invoices.html">FBR</a><a href="#">Payroll</a><a href="#">Reports</a><span class="co">Saffron Textiles · Lahore</span><span class="me">AR</span></header>
+<section class="sub"><h1>Business close</h1><p>Monday 17 November 2026, figures to 14:00</p><div class="per"><span>Today</span><span class="on">Month to date</span><span>Quarter</span><span>FY 2026-27</span></div></section>
+<section class="rates">
+  <div class="rate"><span>Sales, month to date</span><strong>46.6m</strong><div class="chg u"><i></i>+6.2% <em>vs Oct</em></div></div>
+  <div class="rate"><span>Gross margin</span><strong>21.4%</strong><div class="chg d"><i></i>−0.8 pt <em>vs Oct</em></div></div>
+  <div class="rate"><span>Sales tax payable</span><strong>4.81m</strong><div class="chg u"><i></i>+0.35m <em>today</em></div></div>
+  <div class="rate"><span>Receivables</span><strong>21.3m</strong><div class="chg u"><i></i>+0.9m <em>today</em></div></div>
+  <div class="rate"><span>Cash and bank</span><strong>12.9m</strong><div class="chg d"><i></i>−1.6m <em>today</em></div></div>
+  <div class="rate"><span>Posted to FBR</span><strong>128</strong><div class="chg u"><i></i>+9 <em>today</em></div></div>
+</section>
+<section class="grid">
+  <div class="p c7"><h2>Sales by day <small>PKR millions · 1–17 Nov · Sundays light</small></h2>
+    <div class="chart"><div class="axis"><span>4</span><span>3</span><span>2</span><span>1</span><span>0</span></div>
+      <div class="bars"><div class="sun" style="height:10%"></div><div style="height:90%"></div><div style="height:78%"></div><div style="height:73%"></div><div style="height:85%"></div><div style="height:95%"></div><div style="height:55%"></div><div class="sun" style="height:8%"></div><div style="height:88%"></div><div style="height:83%"></div><div style="height:100%"></div><div style="height:80%"></div><div style="height:96%"></div><div style="height:65%"></div><div class="sun" style="height:13%"></div><div style="height:96%"></div><div class="today" style="height:48%"></div></div></div>
+    <div class="days"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div></div>
+  <div class="p c5"><h2>FBR digital invoices <small>November</small></h2>
+    <table><tr><th>Status</th><th class="n">Invoices</th><th class="n">Value PKR</th></tr>
+      <tr><td class="ok">Posted</td><td class="n">128</td><td class="n">39,214,700</td></tr>
+      <tr><td class="wait">Waiting</td><td class="n">14</td><td class="n">5,186,200</td></tr>
+      <tr><td class="bad">Rejected</td><td class="n">3</td><td class="n">2,749,500</td></tr>
+      <tr><td>Drafts</td><td class="n">22</td><td class="n">—</td></tr></table>
+    <p style="margin-top:10px;color:var(--ink-2)">Oldest rejection: INV-2026-0434, 2 days, HS code missing.</p></div>
+  <div class="p c4"><h2>Receivables ageing <small>PKR m</small></h2>
+    <table><tr><td>0–30 days<div class="hbar"><b style="width:46%"></b></div></td><td class="n">9.8</td></tr>
+      <tr><td>31–60 days<div class="hbar"><b style="width:34%"></b></div></td><td class="n">7.3</td></tr>
+      <tr><td>61–90 days<div class="hbar"><b style="width:12%;background:var(--wait)"></b></div></td><td class="n">2.6</td></tr>
+      <tr><td>Over 90 days<div class="hbar"><b style="width:8%;background:var(--down)"></b></div></td><td class="n">1.6</td></tr></table></div>
+  <div class="p c4"><h2>Top buyers <small>Nov, PKR m</small></h2>
+    <table><tr><td>Al-Noor Textiles</td><td class="n">8.4</td></tr><tr><td>Mehran Foods (Pvt) Ltd</td><td class="n">6.1</td></tr><tr><td>Indus Pharma (Pvt) Ltd</td><td class="n">4.9</td></tr><tr><td>Karachi Steel Works</td><td class="n">3.7</td></tr></table></div>
+  <div class="p c4"><h2>Needs you <small>4 items</small></h2>
+    <ul class="todo"><li><b class="bad">3</b>Invoices rejected by FBR<a href="#">Fix</a></li><li><b>2</b>Purchase bills to approve<a href="#">Approve</a></li><li><b>1</b>HBL October reconciliation<a href="#">Open</a></li><li><b>31</b>Days to sales tax return<a href="#">Prepare</a></li></ul></div>
+</section>
+</body></html>

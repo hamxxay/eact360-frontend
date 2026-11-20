@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Closing Rates · FBR digital invoices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--mast:#0B4A8B;--ground:#F7F7F4;--sheet:#FFFFFF;--ink:#111111;--ink-2:#55595E;--rule:#DEDDD7;--up:#1E7B4A;--down:#C0392B;--wait:#9A6400}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:14px/1.4 'Source Sans 3',sans-serif;color:var(--ink);background:var(--ground);font-variant-numeric:tabular-nums}
+::selection{background:color-mix(in srgb,var(--mast) 18%,#fff)}
+.mast{height:56px;background:var(--mast);color:#fff;display:flex;align-items:center;gap:6px;padding:0 28px}
+.logo{font:800 22px 'Libre Franklin';letter-spacing:-.02em;margin-right:22px}
+.mast a{color:color-mix(in srgb,var(--mast) 15%,#fff);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:6px}
+.mast a.on{background:#fff;color:var(--mast)}
+.mast .co{margin-left:auto;font-weight:600;padding:7px 12px;border:1px solid color-mix(in srgb,var(--mast) 78%,#fff);border-radius:6px}
+.mast .me{width:32px;height:32px;border-radius:50%;background:#fff;color:var(--mast);display:grid;place-items:center;font-weight:700;margin-left:10px}
+.sub{display:flex;align-items:center;gap:14px;padding:20px 28px 14px}
+.sub h1{font:700 26px 'Libre Franklin';letter-spacing:-.01em}.sub p{color:var(--ink-2)}
+.btns{margin-left:auto;display:flex;gap:10px}
+.btn{height:38px;padding:0 16px;border-radius:6px;border:1px solid var(--rule);background:var(--sheet);font-weight:700;display:flex;align-items:center}
+.btn.primary{background:var(--mast);border-color:var(--mast);color:#fff}
+.rates{margin:0 28px;display:grid;grid-template-columns:repeat(6,1fr);background:var(--sheet);border:1px solid var(--rule);border-radius:8px}
+.rate{padding:14px 18px;border-left:1px solid var(--rule)}.rate:first-child{border-left:0}
+.rate span{font-weight:600;color:var(--ink-2);font-size:13px}
+.rate strong{display:block;font:700 27px/1.1 'Libre Franklin';letter-spacing:-.02em;margin:6px 0 4px}
+.chg{font-weight:700;font-size:13px;display:flex;align-items:center;gap:5px}
+.chg i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent}
+.chg.u{color:var(--up)}.chg.u i{border-bottom:7px solid var(--up)}
+.chg.d{color:var(--down)}.chg.d i{border-top:7px solid var(--down)}
+.chg em{font-style:normal;font-weight:500;color:var(--ink-2)}
+.list{margin:18px 28px 0;background:var(--sheet);border:1px solid var(--rule);border-radius:8px}
+.bar{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:2px solid var(--ink)}
+.chip{padding:6px 12px;border:1px solid var(--rule);border-radius:6px;color:var(--ink-2);font-weight:500}.chip b{color:var(--ink)}
+.tabs{margin-left:auto;display:flex;gap:2px;background:#ECEBE6;border-radius:7px;padding:3px}
+.tabs span{padding:5px 12px;border-radius:5px;font-weight:600;color:var(--ink-2)}.tabs span.on{background:var(--sheet);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.1)}
+table{width:100%;border-collapse:collapse}
+th{font-size:12px;font-weight:700;color:var(--ink-2);text-transform:uppercase;letter-spacing:.04em;text-align:left;padding:10px 16px;border-bottom:1px solid var(--rule)}
+td{padding:10px 16px;border-bottom:1px solid #EFEEE9}
+.n{text-align:right}
+td.inv{font:700 14px 'Libre Franklin'}
+.ok{color:var(--up);font-weight:700}.bad{color:var(--down);font-weight:700}.wait{color:var(--wait);font-weight:700}
+.why{display:block;font-size:12px;font-weight:500;color:var(--ink-2)}
+tr.sel td{background:#EEF4FB}
+.box{width:16px;height:16px;border:1.5px solid #AEB4BA;border-radius:4px}
+tr.sel .box{background:var(--mast);border-color:var(--mast)}
+</style>
+<script src="../palette-switcher.js" data-design="closing-rates"></script></head><body>
+<header class="mast"><span class="logo">E-ACT 360</span><a href="dashboard.html">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a><a class="on" href="invoices.html">FBR</a><a href="#">Payroll</a><a href="#">Reports</a><span class="co">Saffron Textiles · Lahore</span><span class="me">AR</span></header>
+<section class="sub"><h1>FBR digital invoices</h1><p>Monday 17 November 2026 · live posting on</p>
+  <div class="btns"><span class="btn">Import</span><span class="btn">New invoice</span><span class="btn primary">Post 2 selected to FBR</span></div></section>
+<section class="rates">
+  <div class="rate"><span>Posted, November</span><strong>128</strong><div class="chg u"><i></i>+9 <em>today</em></div></div>
+  <div class="rate"><span>Value posted</span><strong>39.2m</strong><div class="chg u"><i></i>+3.1m <em>today</em></div></div>
+  <div class="rate"><span>Waiting to post</span><strong>14</strong><div class="chg d"><i></i>+4 <em>since 09:00</em></div></div>
+  <div class="rate"><span>Rejected</span><strong>3</strong><div class="chg d"><i></i>+1 <em>today</em></div></div>
+  <div class="rate"><span>Sales tax on posted</span><strong>7.06m</strong><div class="chg u"><i></i>+0.56m <em>today</em></div></div>
+  <div class="rate"><span>Acceptance rate</span><strong>97.7%</strong><div class="chg d"><i></i>−0.4 pt <em>vs Oct</em></div></div>
+</section>
+<section class="list">
+  <div class="bar"><span class="chip">Date <b>1–17 Nov 2026</b></span><span class="chip">Buyer <b>Any</b></span><span class="chip">Province <b>Punjab</b></span>
+    <div class="tabs"><span class="on">All 167</span><span>Waiting 14</span><span>Rejected 3</span><span>Posted 128</span><span>Drafts 22</span></div></div>
+  <table><thead><tr><th style="width:44px"></th><th>Invoice</th><th>Buyer</th><th>NTN</th><th>Date</th><th class="n">Value PKR</th><th class="n">Sales tax PKR</th><th>FBR status</th></tr></thead><tbody>
+    <tr><td><div class="box"></div></td><td class="inv">INV-2026-0441</td><td>Mehran Foods (Pvt) Ltd</td><td>4271093-6</td><td>17 Nov</td><td class="n">1,284,600</td><td class="n">231,228</td><td class="bad">Rejected<span class="why">Buyer NTN not active</span></td></tr>
+    <tr class="sel"><td><div class="box"></div></td><td class="inv">INV-2026-0440</td><td>Indus Pharma (Pvt) Ltd</td><td>3318520-1</td><td>16 Nov</td><td class="n">642,300</td><td class="n">115,614</td><td class="wait">Waiting</td></tr>
+    <tr class="sel"><td><div class="box"></div></td><td class="inv">INV-2026-0436</td><td>Karachi Steel Works</td><td>2290315-4</td><td>14 Nov</td><td class="n">875,900</td><td class="n">157,662</td><td class="wait">Waiting</td></tr>
+    <tr><td><div class="box"></div></td><td class="inv">INV-2026-0439</td><td>Shaheen Traders</td><td>1190447-8</td><td>16 Nov</td><td class="n">98,400</td><td class="n">17,712</td><td class="ok">Posted</td></tr>
+    <tr><td><div class="box"></div></td><td class="inv">INV-2026-0438</td><td>Al-Noor Textiles</td><td>2054871-3</td><td>15 Nov</td><td class="n">2,410,000</td><td class="n">433,800</td><td class="ok">Posted</td></tr>
+    <tr><td><div class="box"></div></td><td class="inv">INV-2026-0437</td><td>Zubair &amp; Sons</td><td>0871236-9</td><td>14 Nov</td><td class="n">56,250</td><td class="n">10,125</td><td class="ok">Posted</td></tr>
+    <tr><td><div class="box"></div></td><td class="inv">INV-2026-0434</td><td>Gulberg Electronics</td><td>3906612-2</td><td>13 Nov</td><td class="n">1,120,000</td><td class="n">201,600</td><td class="bad">Rejected<span class="why">HS code missing</span></td></tr>
+  </tbody></table>
+</section>
+</body></html>

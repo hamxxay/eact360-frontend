@@ -1,0 +1,125 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "design-options/platform-board/invoices.html"
+        ],
+        "createdAt": "2026-11-17T12:09:29.925Z",
+        "reason": "Claude: chips are fixed-height flex controls with text vertically centred, and table wrappers inset via cell padding; no text touches a border"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "design-options/lal-khata/invoices.html"
+        ],
+        "createdAt": "2026-11-17T12:09:30.050Z",
+        "reason": "Claude: chips are fixed-height flex controls with text vertically centred, and table wrappers inset via cell padding; no text touches a border"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "design-options/proof-sheet/invoices.html"
+        ],
+        "createdAt": "2026-11-17T12:09:30.175Z",
+        "reason": "Claude: chips are fixed-height flex controls with text vertically centred, and table wrappers inset via cell padding; no text touches a border"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "design-options/standard/invoices.html"
+        ],
+        "createdAt": "2026-11-17T12:09:30.302Z",
+        "reason": "Claude: chips are fixed-height flex controls with text vertically centred, and table wrappers inset via cell padding; no text touches a border"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "design-options/dense-mosaic/dashboard.html"
+        ],
+        "createdAt": "2026-11-17T12:09:30.437Z",
+        "reason": "Claude: chips are fixed-height flex controls with text vertically centred, and table wrappers inset via cell padding; no text touches a border"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "design-options/closing-rates/dashboard.html"
+        ],
+        "createdAt": "2026-11-17T12:09:30.568Z",
+        "reason": "Claude: repeating gradients are chart gridlines and the hatched partial-day bar, data encoding not decoration"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "design-options/intaglio/dashboard.html"
+        ],
+        "createdAt": "2026-11-17T12:09:30.691Z",
+        "reason": "Claude: repeating gradients are chart gridlines and the hatched partial-day bar, data encoding not decoration"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "design-options/next-gate/dashboard.html"
+        ],
+        "createdAt": "2026-11-17T12:09:30.822Z",
+        "reason": "Claude: repeating gradients are chart gridlines and the hatched partial-day bar, data encoding not decoration"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "design-options/standard/dashboard.html"
+        ],
+        "createdAt": "2026-11-17T12:09:30.944Z",
+        "reason": "Claude: repeating gradients are chart gridlines and the hatched partial-day bar, data encoding not decoration"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          "design-options/standard/invoices.html"
+        ],
+        "createdAt": "2026-11-17T12:09:31.062Z",
+        "reason": "Claude: these files are the deliberate category-standard reference option, Inter is the point of the comparison"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          "design-options/standard/dashboard.html"
+        ],
+        "createdAt": "2026-11-17T12:09:31.184Z",
+        "reason": "Claude: these files are the deliberate category-standard reference option, Inter is the point of the comparison"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "design-options/dense-mosaic/invoices.html"
+        ],
+        "createdAt": "2026-11-17T12:23:52.593Z",
+        "reason": "Claude: nav bar is a fixed-height flex row with centred text, and the table module insets via 8px cell padding; no text touches a border"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          "src/styles/eact.css"
+        ],
+        "createdAt": "2026-11-19T09:40:33.941Z",
+        "reason": "Claude: Inter is the typeface of the Category standard direction the user selected (design-options/standard/*.html load Inter); the app and the classic skin share it"
+      }
+    ]
+  }
+}

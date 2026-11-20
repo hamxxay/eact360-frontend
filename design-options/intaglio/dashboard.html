@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Intaglio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1C2D5A;--navy-2:#26397055;--ground:#F6F7FA;--sheet:#FFFFFF;--ink:#151B2C;--ink-2:#596178;--rule:#E1E4EC;--green:#3E7C59;--serial:#C1272D;--gold:#B8A16A;--wait:#94620A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:14px/1.5 'Work Sans',sans-serif;color:var(--ink);background:var(--ground);display:grid;grid-template-columns:228px 1fr;font-variant-numeric:tabular-nums}
+::selection{background:color-mix(in srgb,var(--gold) 36%,#fff)}
+.rail{background:var(--navy);color:#DCE2F0;padding:24px 14px;display:flex;flex-direction:column;gap:2px}
+.brand{font:700 21px 'Libre Baskerville',serif;color:#fff;padding:0 10px 4px}
+.brand-sub{font-size:12px;color:color-mix(in srgb,var(--navy) 30%,var(--rule));padding:0 10px 24px}
+.rail a{padding:9px 10px;border-radius:6px;color:color-mix(in srgb,var(--navy) 10%,var(--rule));text-decoration:none;font-weight:500}
+.rail a.on{background:color-mix(in srgb,var(--navy) 89%,var(--rule));color:#fff;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--gold) 60%,transparent)}
+.grp{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:color-mix(in srgb,var(--navy) 41%,var(--rule));padding:18px 10px 6px}
+.rail .co{margin-top:auto;padding:12px 10px;border-top:1px solid color-mix(in srgb,var(--navy) 85%,var(--rule));font-size:12px;color:color-mix(in srgb,var(--navy) 23%,var(--rule))}
+main{padding:26px 32px;display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto 1fr;gap:18px;min-width:0}
+.head{grid-column:1/-1;display:flex;align-items:baseline;gap:14px}
+h1{font:700 28px 'Libre Baskerville',serif;letter-spacing:-.01em}
+.head p{color:var(--ink-2)}
+.head .per{margin-left:auto;border:1px solid var(--rule);background:var(--sheet);border-radius:6px;padding:7px 12px;font-weight:500}
+.p{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:20px 22px;position:relative;overflow:hidden}
+.p h2{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-bottom:12px}
+.cash{grid-row:span 1}
+.cash .fig{font:700 44px/1 'Libre Baskerville',serif;letter-spacing:-.01em;position:relative}
+.cash .fig small{font-size:18px;color:var(--ink-2);font-weight:400;margin-right:8px}
+.cash .chg{color:var(--serial);font-weight:600;margin:8px 0 16px;position:relative}
+.cash svg{position:absolute;right:-60px;top:-50px;opacity:.55}
+.banks{position:relative;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule)}
+.banks div{padding:12px 12px 0 0}
+.banks span{display:block;color:var(--ink-2);font-size:12px}
+.banks b{font:700 16px 'Libre Baskerville',serif}
+.tax .fig{font:700 34px/1.1 'Libre Baskerville',serif}
+.tax .due{color:var(--ink-2);margin:6px 0 14px}
+.fbr{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule)}
+.fbr div{padding-top:12px}
+.fbr b{display:block;font:700 26px 'Libre Baskerville',serif}
+.ok{color:var(--green)}.wait{color:var(--wait)}.bad{color:var(--serial)}
+.chart{display:flex;align-items:flex-end;gap:8px;height:170px;border-bottom:1px solid var(--ink);background:repeating-linear-gradient(to top,transparent 0 41px,#EEF0F5 41px 42px)}
+.chart div{flex:1;background:var(--navy);border-radius:2px 2px 0 0}
+.chart div.sun{background:#C5CCDD}.chart div.today{background:var(--gold)}
+.days{display:flex;gap:8px;color:var(--ink-2);font-size:11px;padding-top:4px}.days span{flex:1;text-align:center}
+.docs td{padding:9px 0;border-bottom:1px solid #EEF0F4}
+.docs table{width:100%;border-collapse:collapse}
+.serialno{font:700 13px 'Libre Baskerville',serif;color:var(--serial);letter-spacing:.06em}
+.n{text-align:right}
+.st{font-weight:600;font-size:13px}
+</style>
+<script src="../palette-switcher.js" data-design="intaglio"></script></head><body>
+<nav class="rail"><div class="brand">E-ACT 360</div><div class="brand-sub">Accounts &amp; FBR compliance</div>
+  <a class="on" href="dashboard.html">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a>
+  <div class="grp">Compliance</div><a href="invoices.html">FBR digital invoices</a><a href="#">Provincial invoices</a>
+  <div class="grp">People</div><a href="#">Payroll</a><a href="#">Reports</a>
+  <div class="co">Saffron Textiles (Pvt) Ltd<br>Lahore head office</div></nav>
+<main>
+  <section class="head"><h1>Dashboard</h1><p>Monday 17 November 2026</p><span class="per">November 2026 · FY 2026-27</span></section>
+  <section class="p cash"><h2>Cash position</h2>
+    <svg width="380" height="300" viewBox="0 0 380 300" fill="none" style="stroke:var(--gold)" stroke-width=".7"><g transform="translate(190 150)">
+      <ellipse rx="150" ry="60"/><ellipse rx="150" ry="60" transform="rotate(15)"/><ellipse rx="150" ry="60" transform="rotate(30)"/><ellipse rx="150" ry="60" transform="rotate(45)"/><ellipse rx="150" ry="60" transform="rotate(60)"/><ellipse rx="150" ry="60" transform="rotate(75)"/><ellipse rx="150" ry="60" transform="rotate(90)"/><ellipse rx="150" ry="60" transform="rotate(105)"/><ellipse rx="150" ry="60" transform="rotate(120)"/><ellipse rx="150" ry="60" transform="rotate(135)"/><ellipse rx="150" ry="60" transform="rotate(150)"/><ellipse rx="150" ry="60" transform="rotate(165)"/>
+      <circle r="58"/><circle r="64"/></g></svg>
+    <div class="fig"><small>PKR</small>12,906,400</div>
+    <div class="chg">Down 1,612,000 since yesterday · salaries paid</div>
+    <div class="banks"><div><span>HBL main</span><b>6,214,900</b></div><div><span>Meezan</span><b>4,102,500</b></div><div><span>MCB</span><b>1,889,000</b></div><div><span>Cash in hand</span><b>700,000</b></div></div></section>
+  <section class="p tax"><h2>Sales tax payable</h2><div class="fig">PKR 4,812,960</div><div class="due">Return due 18 December 2026 · 31 days</div>
+    <div class="fbr"><div><b class="ok">128</b>posted to FBR</div><div><b class="wait">14</b>waiting</div><div><b class="bad">3</b>rejected</div></div></section>
+  <section class="p"><h2>Sales by day · PKR millions</h2>
+    <div class="chart"><div class="sun" style="height:10%"></div><div style="height:88%"></div><div style="height:76%"></div><div style="height:71%"></div><div style="height:83%"></div><div style="height:93%"></div><div style="height:54%"></div><div class="sun" style="height:7%"></div><div style="height:85%"></div><div style="height:80%"></div><div style="height:100%"></div><div style="height:78%"></div><div style="height:95%"></div><div style="height:63%"></div><div class="sun" style="height:12%"></div><div style="height:95%"></div><div class="today" style="height:46%"></div></div>
+    <div class="days"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div></section>
+  <section class="p docs"><h2>Latest documents</h2><table>
+    <tr><td class="serialno">INV 0441</td><td>Mehran Foods (Pvt) Ltd</td><td class="n">1,284,600</td><td class="n st bad">Rejected</td></tr>
+    <tr><td class="serialno">INV 0440</td><td>Indus Pharma (Pvt) Ltd</td><td class="n">642,300</td><td class="n st wait">Waiting</td></tr>
+    <tr><td class="serialno">RV 0218</td><td>Al-Noor Textiles</td><td class="n">1,500,000</td><td class="n st ok">Received</td></tr>
+    <tr><td class="serialno">INV 0439</td><td>Shaheen Traders</td><td class="n">98,400</td><td class="n st ok">Posted</td></tr>
+    <tr><td class="serialno">PB 0107</td><td>Sitara Chemicals</td><td class="n">734,000</td><td class="n st wait">To approve</td></tr></table></section>
+</main>
+</body></html>

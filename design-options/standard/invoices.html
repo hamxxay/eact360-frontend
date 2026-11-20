@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Category standard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8FAFC;--card:#FFFFFF;--ink:#0F172A;--ink-2:#556274;--line:#E2E8F0;--blue:#2563EB;--blue-bg:#EFF6FF;--ok:#15803D;--ok-bg:#F0FDF4;--wait:#B45309;--wait-bg:#FFFBEB;--bad:#B91C1C;--bad-bg:#FEF2F2}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:14px/1.5 Inter,sans-serif;color:var(--ink);background:var(--bg);display:grid;grid-template-columns:248px 1fr;font-variant-numeric:tabular-nums}
+::selection{background:color-mix(in srgb,var(--blue) 15%,#fff)}
+aside{background:var(--card);border-right:1px solid var(--line);padding:20px 14px;display:flex;flex-direction:column;gap:2px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;padding:0 10px 20px}
+.logo{width:30px;height:30px;border-radius:8px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
+aside a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;color:#334155;text-decoration:none;font-weight:500}
+aside a svg{width:18px;height:18px;stroke:#64748B;fill:none;stroke-width:1.8}
+aside a.on{background:var(--blue-bg);color:var(--blue)}
+aside a.on svg{stroke:var(--blue)}
+.grp{font-size:12px;font-weight:600;color:#64748B;padding:16px 10px 6px}
+.org{margin-top:auto;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px}
+.org span{display:block;color:var(--ink-2);font-size:12px}
+main{display:flex;flex-direction:column;min-width:0}
+.top{height:60px;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:0 32px}
+.crumb{color:var(--ink-2)}.crumb b{color:var(--ink);font-weight:600}
+.search{margin-left:auto;width:320px;height:36px;border:1px solid var(--line);border-radius:8px;background:var(--bg);display:flex;align-items:center;gap:8px;padding:0 12px;color:#64748B}
+.av{width:34px;height:34px;border-radius:50%;background:color-mix(in srgb,var(--blue) 15%,#fff);color:color-mix(in srgb,var(--blue) 70%,#000);display:grid;place-items:center;font-weight:600;font-size:13px}
+.content{padding:28px 32px;display:flex;flex-direction:column;gap:20px}
+.head{display:flex;align-items:flex-end}
+h1{font-size:26px;font-weight:700;letter-spacing:-.02em}
+.head p{color:var(--ink-2);margin-top:4px}
+.btns{margin-left:auto;display:flex;gap:10px}
+.btn{height:38px;padding:0 14px;border-radius:8px;border:1px solid var(--line);background:var(--card);font-weight:600;display:flex;align-items:center;color:#334155}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.tabs{display:flex;gap:4px;padding:0 16px;border-bottom:1px solid var(--line)}
+.tabs span{padding:14px 12px;color:var(--ink-2);font-weight:500;display:flex;gap:8px;align-items:center}
+.tabs span em{font-style:normal;background:#F1F5F9;border-radius:999px;padding:1px 8px;font-size:12px;color:#475569}
+.tabs span.on{color:var(--blue);box-shadow:inset 0 -2px 0 var(--blue)}
+.tabs span.on em{background:var(--blue-bg);color:var(--blue)}
+.tools{display:flex;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.sel{height:34px;border:1px solid var(--line);border-radius:8px;padding:0 12px;display:flex;align-items:center;gap:6px;color:var(--ink-2)}
+.sel b{color:var(--ink);font-weight:500}
+.alert{display:flex;align-items:center;gap:10px;margin:0;padding:12px 16px;background:var(--bad-bg);color:var(--bad);border-bottom:1px solid #FECACA;font-weight:500}
+.alert u{margin-left:auto;text-decoration:none;font-weight:600}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:12px;font-weight:600;color:var(--ink-2);padding:10px 16px;background:#F8FAFC;border-bottom:1px solid var(--line)}
+td{padding:12px 16px;border-bottom:1px solid #F1F5F9}
+.n{text-align:right}
+td.inv{font-weight:600;color:var(--blue)}
+.badge{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600}
+.b-ok{background:var(--ok-bg);color:var(--ok)}.b-wait{background:var(--wait-bg);color:var(--wait)}.b-bad{background:var(--bad-bg);color:var(--bad)}
+.why{display:block;color:var(--ink-2);font-size:12px;margin-top:2px}
+.box{width:16px;height:16px;border:1.5px solid #CBD5E1;border-radius:4px}
+</style>
+<script src="../palette-switcher.js" data-design="standard"></script></head><body>
+<aside>
+  <div class="brand"><div class="logo">360</div>E-ACT 360</div>
+  <a href="dashboard.html"><svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8M5 10v10h14V10"/></svg>Dashboard</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h16"/></svg>Sales</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M6 6h15l-2 9H8L6 3H3"/></svg>Purchases</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7"/></svg>Inventory</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M4 19V5M10 19V9M16 19v-6M22 19H2"/></svg>Accounts</a>
+  <div class="grp">Compliance</div>
+  <a href="invoices.html" class="on"><svg viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7zM15 3v4h4M10 13l2 2 4-4"/></svg>FBR digital invoices</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M7 3h10v18H7zM10 8h4M10 12h4"/></svg>Provincial invoices</a>
+  <div class="grp">People</div>
+  <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Payroll</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 8h6M9 12h6M9 16h3"/></svg>Reports</a>
+  <div class="org">Saffron Textiles (Pvt) Ltd<span>Lahore head office · FY 2026-27</span></div>
+</aside>
+<main>
+  <header class="top"><span class="crumb">Compliance / <b>FBR digital invoices</b></span><div class="search">Search invoices, buyers, NTN</div><div class="av">AR</div></header>
+  <div class="content">
+    <section class="head"><div><h1>FBR digital invoices</h1><p>167 invoices from 1 to 17 November 2026</p></div>
+      <div class="btns"><span class="btn">Import</span><span class="btn">New invoice</span><span class="btn primary">Post 14 to FBR</span></div></section>
+    <section class="panel">
+      <div class="tabs"><span class="on">All <em>167</em></span><span>Waiting <em>14</em></span><span>Rejected <em>3</em></span><span>Posted <em>128</em></span><span>Drafts <em>22</em></span></div>
+      <div class="alert">3 invoices were rejected by FBR and need correction before reposting.<u>Review rejected</u></div>
+      <div class="tools"><span class="sel">Date <b>1–17 Nov 2026</b></span><span class="sel">Buyer <b>Any</b></span><span class="sel">Province <b>Punjab</b></span></div>
+      <table><thead><tr><th style="width:44px"></th><th>Invoice</th><th>Buyer</th><th>Date</th><th class="n">Value (PKR)</th><th class="n">Sales tax (PKR)</th><th>FBR status</th></tr></thead><tbody>
+        <tr><td><div class="box"></div></td><td class="inv">INV-2026-0441</td><td>Mehran Foods (Pvt) Ltd</td><td>17 Nov 2026</td><td class="n">1,284,600</td><td class="n">231,228</td><td><span class="badge b-bad">Rejected</span><span class="why">Buyer NTN not active</span></td></tr>
+        <tr><td><div class="box"></div></td><td class="inv">INV-2026-0440</td><td>Indus Pharma (Pvt) Ltd</td><td>16 Nov 2026</td><td class="n">642,300</td><td class="n">115,614</td><td><span class="badge b-wait">Waiting</span></td></tr>
+        <tr><td><div class="box"></div></td><td class="inv">INV-2026-0439</td><td>Shaheen Traders</td><td>16 Nov 2026</td><td class="n">98,400</td><td class="n">17,712</td><td><span class="badge b-ok">Posted</span></td></tr>
+        <tr><td><div class="box"></div></td><td class="inv">INV-2026-0438</td><td>Al-Noor Textiles</td><td>15 Nov 2026</td><td class="n">2,410,000</td><td class="n">433,800</td><td><span class="badge b-ok">Posted</span></td></tr>
+        <tr><td><div class="box"></div></td><td class="inv">INV-2026-0437</td><td>Zubair &amp; Sons</td><td>14 Nov 2026</td><td class="n">56,250</td><td class="n">10,125</td><td><span class="badge b-ok">Posted</span></td></tr>
+        <tr><td><div class="box"></div></td><td class="inv">INV-2026-0436</td><td>Karachi Steel Works</td><td>14 Nov 2026</td><td class="n">875,900</td><td class="n">157,662</td><td><span class="badge b-wait">Waiting</span></td></tr>
+      </tbody></table>
+    </section>
+  </div>
+</main>
+</body></html>

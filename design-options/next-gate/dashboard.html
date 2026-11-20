@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Next Gate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--sign:#FFD100;--ink:#111111;--ink-2:#5B5B57;--ground:#F2F2EF;--sheet:#FFFFFF;--rail:#1E1E1E;--rule:#DFDFDA;--ok:#1C7A46;--bad:#C2301F;--wait:#8F5E00}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:15px/1.4 Mukta,sans-serif;color:var(--ink);background:var(--ground);display:grid;grid-template-columns:220px 1fr;font-variant-numeric:tabular-nums}
+::selection{background:var(--sign)}
+.rail{background:var(--rail);color:#E6E6E2;padding:22px 12px;display:flex;flex-direction:column;gap:2px}
+.brand{font:800 22px Mukta;color:#fff;padding:0 10px 22px;letter-spacing:-.01em}
+.rail a{padding:8px 10px;border-radius:6px;color:#C8C8C2;text-decoration:none;font-weight:500}
+.rail a.on{background:#fff;color:var(--ink);font-weight:700}
+.grp{font-size:12px;font-weight:600;color:#8C8C86;padding:16px 10px 4px}
+.rail .co{margin-top:auto;padding:12px 10px;border-top:1px solid color-mix(in srgb,var(--rail) 91%,#fff);font-size:13px;color:#A8A8A2}
+main{display:flex;flex-direction:column;min-width:0}
+.top{height:58px;background:var(--sheet);border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:20px;padding:0 30px}
+.top h1{font:700 30px Mukta}.top p{color:var(--ink-2)}
+.top .per{margin-left:auto;border:1px solid var(--rule);border-radius:6px;padding:4px 12px;font-weight:600}
+.top .me{width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+.signs{display:grid;grid-template-columns:repeat(3,1fr);background:var(--sign);margin:22px 30px 0;border-radius:6px}
+.sign{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;padding:18px 22px;border-left:2px solid var(--ink)}
+.sign:first-child{border-left:0}
+.sign .num{font:800 64px/0.9 Mukta;letter-spacing:-.03em}
+.sign h2{font:700 24px/1.15 Mukta}
+.sign p{font-weight:500;color:color-mix(in srgb,var(--sign) 23%,#000)}
+.sign .go{width:44px;height:44px;background:var(--ink);border-radius:4px;display:grid;place-items:center}
+.label{margin:26px 30px 10px;font-weight:700;font-size:15px;display:flex;gap:10px;align-items:baseline}
+.label span{font-weight:500;color:var(--ink-2)}
+.figs{display:grid;grid-template-columns:repeat(4,1fr);margin:0 30px;background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.fig{padding:16px 20px;border-left:1px solid var(--rule)}
+.fig:first-child{border-left:0}
+.fig span{color:var(--ink-2);font-weight:500}
+.fig strong{display:block;font:700 30px/1.1 Mukta;letter-spacing:-.02em;margin:4px 0}
+.fig em{font-style:normal;font-weight:600}
+.up{color:var(--ok)}.down{color:var(--bad)}.wait{color:var(--wait)}
+.row{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;margin:18px 30px 0}
+.p{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:16px 20px}
+.p h3{font:700 19px Mukta;margin-bottom:10px;display:flex}.p h3 small{margin-left:auto;font-weight:500;color:var(--ink-2);font-size:13px}
+.bars{display:flex;align-items:flex-end;gap:8px;height:190px;border-bottom:2px solid var(--ink);background:repeating-linear-gradient(to top,transparent 0 46px,#EEEEEA 46px 47px)}
+.bars i{flex:1;background:color-mix(in srgb,var(--rail) 74%,var(--ink-2));border-radius:2px 2px 0 0}.bars i.s{background:#CFCFC9}.bars i.t{background:repeating-linear-gradient(45deg,color-mix(in srgb,var(--rail) 74%,var(--ink-2)) 0 3px,#8A8A85 3px 6px)}
+.days{display:flex;gap:8px;color:var(--ink-2);font-size:12px;padding-top:4px}.days span{flex:1;text-align:center}
+table{width:100%;border-collapse:collapse}td{padding:8px 0;border-bottom:1px solid #EFEFEA}.n{text-align:right;font-weight:600}
+</style>
+<script src="../palette-switcher.js" data-design="next-gate"></script></head><body>
+<nav class="rail"><div class="brand">E-ACT 360</div>
+  <a class="on" href="dashboard.html">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a>
+  <div class="grp">Compliance</div><a href="invoices.html">FBR digital invoices</a><a href="#">Provincial invoices</a>
+  <div class="grp">People</div><a href="#">Payroll</a><a href="#">Reports</a>
+  <div class="co">Saffron Textiles (Pvt) Ltd<br>Lahore head office</div></nav>
+<main>
+  <header class="top"><h1>Dashboard</h1><p>Monday 17 November 2026</p><span class="per">November 2026</span><span class="me">AR</span></header>
+  <section class="signs">
+    <div class="sign"><span class="num">3</span><div><h2>Invoices rejected by FBR</h2><p>Fix the buyer NTN and HS code, then repost</p></div><span class="go"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="stroke:var(--sign)" stroke-width="2.4"><path d="M4 10h11M11 5l5 5-5 5"/></svg></span></div>
+    <div class="sign"><span class="num">2</span><div><h2>Purchase bills to approve</h2><p>Sitara Chemicals and Packages Ltd, PKR 946,500</p></div><span class="go"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="stroke:var(--sign)" stroke-width="2.4"><path d="M4 10h11M11 5l5 5-5 5"/></svg></span></div>
+    <div class="sign"><span class="num">31</span><div><h2>Days to sales tax return</h2><p>PKR 4,812,960 payable by 18 December</p></div><span class="go"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="stroke:var(--sign)" stroke-width="2.4"><path d="M4 10h11M11 5l5 5-5 5"/></svg></span></div>
+  </section>
+  <div class="label">November so far <span>month to date, compared with October at the same day</span></div>
+  <section class="figs">
+    <div class="fig"><span>Sales</span><strong>PKR 46.6m</strong><em class="up">Up 6.2%</em></div>
+    <div class="fig"><span>Cash and bank</span><strong>PKR 12.9m</strong><em class="down">Down 1.6m today</em></div>
+    <div class="fig"><span>Receivables</span><strong>PKR 21.3m</strong><em class="wait">1.6m over 90 days</em></div>
+    <div class="fig"><span>Posted to FBR</span><strong>128</strong><em>14 waiting</em></div>
+  </section>
+  <section class="row">
+    <div class="p"><h3>Sales by day <small>PKR millions · Sundays light · today striped</small></h3>
+      <div class="bars"><i class="s" style="height:10%"></i><i style="height:88%"></i><i style="height:76%"></i><i style="height:71%"></i><i style="height:83%"></i><i style="height:93%"></i><i style="height:54%"></i><i class="s" style="height:7%"></i><i style="height:85%"></i><i style="height:80%"></i><i style="height:100%"></i><i style="height:78%"></i><i style="height:95%"></i><i style="height:63%"></i><i class="s" style="height:12%"></i><i style="height:95%"></i><i class="t" style="height:46%"></i></div>
+      <div class="days"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div></div>
+    <div class="p"><h3>Receivables ageing <small>PKR m</small></h3><table>
+      <tr><td>0–30 days</td><td class="n">9.8</td></tr><tr><td>31–60 days</td><td class="n">7.3</td></tr><tr><td>61–90 days</td><td class="n wait">2.6</td></tr><tr><td>Over 90 days</td><td class="n down">1.6</td></tr><tr><td>Total</td><td class="n">21.3</td></tr></table></div>
+  </section>
+</main>
+</body></html>

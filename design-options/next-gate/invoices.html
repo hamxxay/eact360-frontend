@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Next Gate · FBR digital invoices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--sign:#FFD100;--ink:#111111;--ink-2:#5B5B57;--ground:#F2F2EF;--sheet:#FFFFFF;--rail:#1E1E1E;--rule:#DFDFDA;--ok:#1C7A46;--bad:#C2301F;--wait:#8F5E00}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:15px/1.4 Mukta,sans-serif;color:var(--ink);background:var(--ground);display:grid;grid-template-columns:220px 1fr;font-variant-numeric:tabular-nums}
+::selection{background:var(--sign)}
+.rail{background:var(--rail);color:#E6E6E2;padding:22px 12px;display:flex;flex-direction:column;gap:2px}
+.brand{font:800 22px Mukta;color:#fff;padding:0 10px 22px}
+.rail a{padding:8px 10px;border-radius:6px;color:#C8C8C2;text-decoration:none;font-weight:500}
+.rail a.on{background:#fff;color:var(--ink);font-weight:700}
+.grp{font-size:12px;font-weight:600;color:#A5A59F;padding:16px 10px 4px}
+.rail .co{margin-top:auto;padding:12px 10px;border-top:1px solid color-mix(in srgb,var(--rail) 91%,#fff);font-size:13px;color:#A8A8A2}
+main{display:flex;flex-direction:column;min-width:0}
+.top{height:58px;background:var(--sheet);border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:20px;padding:0 30px}
+.top h1{font:700 30px Mukta}.top p{color:var(--ink-2)}
+.top .btns{margin-left:auto;display:flex;gap:10px}
+.btn{padding:6px 14px;border:1px solid var(--ink);border-radius:6px;font-weight:600}
+.signs{display:grid;grid-template-columns:repeat(3,1fr);background:var(--sign);margin:22px 30px 0;border-radius:6px}
+.sign{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;padding:18px 22px;border-left:2px solid var(--ink)}.sign:first-child{border-left:0}
+.sign .num{font:800 64px/0.9 Mukta;letter-spacing:-.03em}
+.sign h2{font:700 24px/1.15 Mukta}.sign p{font-weight:500;color:color-mix(in srgb,var(--sign) 23%,#000)}
+.sign .go{width:44px;height:44px;background:var(--ink);border-radius:4px;display:grid;place-items:center}
+.list{margin:22px 30px 0;background:var(--sheet);border:1px solid var(--rule);border-radius:6px}
+.bar{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:2px solid var(--ink)}
+.chip{padding:5px 12px;border:1px solid var(--rule);border-radius:6px;color:var(--ink-2)}.chip b{color:var(--ink);font-weight:600}
+.tabs{margin-left:auto;display:flex;gap:16px}
+.tabs span{color:var(--ink-2);font-weight:600;padding:4px 0}.tabs span.on{color:var(--ink);box-shadow:inset 0 -3px 0 var(--ink)}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-weight:600;color:var(--ink-2);padding:10px 18px;border-bottom:1px solid var(--rule)}
+td{padding:11px 18px;border-bottom:1px solid #EFEFEA}
+.n{text-align:right}td.inv{font-weight:700}
+.ok{color:var(--ok);font-weight:700}.bad{color:var(--bad);font-weight:700}.wait{color:var(--wait);font-weight:700}
+.why{display:block;font-size:13px;font-weight:500;color:var(--ink-2)}
+</style>
+<script src="../palette-switcher.js" data-design="next-gate"></script></head><body>
+<nav class="rail"><div class="brand">E-ACT 360</div>
+  <a href="dashboard.html">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a>
+  <div class="grp">Compliance</div><a class="on" href="invoices.html">FBR digital invoices</a><a href="#">Provincial invoices</a>
+  <div class="grp">People</div><a href="#">Payroll</a><a href="#">Reports</a>
+  <div class="co">Saffron Textiles (Pvt) Ltd<br>Lahore head office</div></nav>
+<main>
+  <header class="top"><h1>FBR digital invoices</h1><p>Monday 17 November 2026 · live posting on</p><div class="btns"><span class="btn">Import</span><span class="btn">New invoice</span></div></header>
+  <section class="signs">
+    <div class="sign"><span class="num">3</span><div><h2>Rejected by FBR</h2><p>Fix buyer NTN or HS code, then repost</p></div><span class="go"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="stroke:var(--sign)" stroke-width="2.4"><path d="M4 10h11M11 5l5 5-5 5"/></svg></span></div>
+    <div class="sign"><span class="num">14</span><div><h2>Ready to post</h2><p>PKR 5,186,200 · next run at 15:00</p></div><span class="go"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="stroke:var(--sign)" stroke-width="2.4"><path d="M4 10h11M11 5l5 5-5 5"/></svg></span></div>
+    <div class="sign"><span class="num">22</span><div><h2>Drafts to finish</h2><p>Oldest started 6 November</p></div><span class="go"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="stroke:var(--sign)" stroke-width="2.4"><path d="M4 10h11M11 5l5 5-5 5"/></svg></span></div>
+  </section>
+  <section class="list">
+    <div class="bar"><span class="chip">Date <b>1–17 Nov 2026</b></span><span class="chip">Buyer <b>Any</b></span><span class="chip">Province <b>Punjab</b></span>
+      <div class="tabs"><span class="on">All 167</span><span>Rejected 3</span><span>Ready 14</span><span>Posted 128</span><span>Drafts 22</span></div></div>
+    <table><thead><tr><th>Invoice</th><th>Buyer</th><th>NTN</th><th>Date</th><th class="n">Value PKR</th><th class="n">Sales tax PKR</th><th>FBR status</th></tr></thead><tbody>
+      <tr><td class="inv">INV-2026-0441</td><td>Mehran Foods (Pvt) Ltd</td><td>4271093-6</td><td>17 Nov</td><td class="n">1,284,600</td><td class="n">231,228</td><td class="bad">Rejected<span class="why">Buyer NTN not active</span></td></tr>
+      <tr><td class="inv">INV-2026-0440</td><td>Indus Pharma (Pvt) Ltd</td><td>3318520-1</td><td>16 Nov</td><td class="n">642,300</td><td class="n">115,614</td><td class="wait">Ready</td></tr>
+      <tr><td class="inv">INV-2026-0439</td><td>Shaheen Traders</td><td>1190447-8</td><td>16 Nov</td><td class="n">98,400</td><td class="n">17,712</td><td class="ok">Posted</td></tr>
+      <tr><td class="inv">INV-2026-0438</td><td>Al-Noor Textiles</td><td>2054871-3</td><td>15 Nov</td><td class="n">2,410,000</td><td class="n">433,800</td><td class="ok">Posted</td></tr>
+      <tr><td class="inv">INV-2026-0437</td><td>Zubair &amp; Sons</td><td>0871236-9</td><td>14 Nov</td><td class="n">56,250</td><td class="n">10,125</td><td class="ok">Posted</td></tr>
+      <tr><td class="inv">INV-2026-0436</td><td>Karachi Steel Works</td><td>2290315-4</td><td>14 Nov</td><td class="n">875,900</td><td class="n">157,662</td><td class="wait">Ready</td></tr>
+    </tbody></table>
+  </section>
+</main>
+</body></html>

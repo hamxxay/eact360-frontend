@@ -1,0 +1,171 @@
+/* ==========================================================================
+   6. Component · Intaglio layer (cheque & counterfoil)
+   Engraved bank-green ink on a faint security-tinted ground; one-device-pixel rules, double rules open
+   a section; engraved capitals for titles; figures in fixed tabular cells; the counterfoil stub carries
+   the screen's totals; void records stay visible under a VOID stamp. No glass, blur or gradient fills.
+   ========================================================================== */
+/* Ground: cheque paper with a whisper of two-direction pantograph line work, fixed to the window */
+html, body { background: var(--bg); }
+.e-shell {
+  background:
+    repeating-linear-gradient(118deg, var(--tint-a) 0 1px, transparent 1px 7px),
+    repeating-linear-gradient(62deg, var(--tint-b) 0 1px, transparent 1px 9px),
+    var(--bg);
+  background-attachment: fixed;
+}
+.e-shell-main { background: transparent !important; }
+
+/* Browser surfaces carry the world too */
+::selection { background: color-mix(in srgb, var(--accent) 20%, transparent); color: var(--ink); }
+html { scrollbar-color: var(--line-strong) transparent; }
+input, textarea, [contenteditable] { caret-color: var(--accent); }
+
+/* Side rail: bank-green, engraved brand, gold double rule on its edge */
+.e-sidebar-side {
+  background: var(--rail-bg) !important;
+  border-right: 3px double var(--rail-gold) !important;
+  color: var(--rail-ink);
+  scrollbar-color: color-mix(in srgb, var(--rail-ink) 30%, transparent) transparent;
+}
+.e-sidebar-brand { font-family: var(--font-engraved); font-weight: 700; letter-spacing: .08em; color: var(--rail-ink-strong); border-bottom: 1px solid color-mix(in srgb, var(--rail-gold) 55%, transparent); padding-bottom: 16px; margin-bottom: 8px; }
+.e-sidebar-logo { background: var(--rail-ink-strong); color: var(--rail-bg); border-radius: var(--radius-sm); font-family: var(--font); }
+.e-sidebar-collapse, .e-sidebar-close { color: var(--rail-ink); }
+.e-sidebar-collapse:hover, .e-sidebar-close:hover { background: color-mix(in srgb, var(--rail-ink) 12%, transparent); color: var(--rail-ink-strong); }
+.e-sidebar-grp, .e-sidebar-section { font-family: var(--font-engraved); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--rail-gold); }
+.e-sidebar-link, .e-sidebar-mod-head { color: var(--rail-ink); border-radius: var(--radius-sm); }
+.e-sidebar-link svg { color: color-mix(in srgb, var(--rail-ink) 75%, transparent); }
+.e-sidebar-link:hover, .e-sidebar-mod-head:hover { background: color-mix(in srgb, var(--rail-ink) 10%, transparent); color: var(--rail-ink-strong); }
+.e-sidebar-count { color: color-mix(in srgb, var(--rail-ink) 70%, transparent); }
+.e-sidebar-chev { border-color: color-mix(in srgb, var(--rail-ink) 70%, transparent); }
+.e-sidebar-mod-list { border-left-color: color-mix(in srgb, var(--rail-gold) 45%, transparent); }
+.e-sidebar-on { background: var(--card) !important; color: var(--accent) !important; font-weight: 700; }
+.e-sidebar-on svg { color: var(--accent) !important; }
+.e-sidebar-on::before { background: var(--rail-gold) !important; }
+.e-sidebar-new-tag { background: var(--rail-gold); color: var(--rail-bg); border-radius: var(--radius-sm); }
+.e-sidebar-org { border-color: color-mix(in srgb, var(--rail-gold) 45%, transparent); color: var(--rail-ink-strong); }
+.e-sidebar-org span { color: var(--rail-ink); }
+.e-sidebar-collapsed .e-sidebar-abbr { background: color-mix(in srgb, var(--rail-ink) 14%, transparent); color: var(--rail-ink-strong); border-radius: var(--radius-sm); font-family: var(--font-engraved); }
+.e-sidebar-collapsed .e-sidebar-mod-on .e-sidebar-abbr { background: var(--card); color: var(--accent); }
+
+/* Top bar: cheque white over one engraved green rule */
+.e-topbar-top {
+  background: var(--card) !important;
+  border-bottom: 1px solid var(--accent) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+.e-classic-strip { background: var(--card) !important; border-bottom: 1px solid var(--line) !important; }
+.e-classic-frame { background: transparent !important; }
+
+/* Page title: engraved capitals; no label above it */
+.e-page-header-head h1 { font-family: var(--font-engraved); font-weight: 700; letter-spacing: .04em; color: var(--accent); }
+
+/* Widgets: cheque-white panels in one engraved outline, square corners, a quiet paper shadow */
+.e-card, .e-kpi, .e-jv-panel, .e-jvl-filters, .e-fbr-panel, .e-jv-sum {
+  background: var(--card) !important;
+  border: 1px solid var(--panel-line) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-card) !important;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+.e-kpi:hover, .e-card:hover { box-shadow: var(--shadow-float) !important; }
+/* Section heads: engraved capitals over a double rule */
+.e-card-title, .e-jv-panel-head h2, .e-jvl-filters h2, .e-fbr-panel h2 { font-family: var(--font-engraved); font-weight: 700; letter-spacing: .06em; color: var(--accent); }
+.e-jv-panel-head, .e-jvl-filters h2 { background: transparent; border-bottom: 3px double var(--accent) !important; }
+.e-jvl-filters h2 svg { color: var(--accent); }
+.e-jvl-tools, .e-jvl-foot, .e-jv-actions, .e-jv-dims { border-color: var(--line) !important; }
+.e-jvl-filter-grid, .e-jv-dims { background: transparent; }
+
+/* Controls: standard fields, one ink border, green focus */
+.e-jv-input, .e-cb-input, .e-jvl-select, .e-jvl-chip, .e-filters-sel, .e-filters-search, .e-topbar-search input,
+.e-topbar-theme, .e-btn-default, .e-login-field input { border-color: var(--control-line) !important; border-radius: var(--radius) !important; }
+.e-jv-input:hover:not(:disabled):not(:focus), .e-cb-input:hover:not(:disabled):not(:focus), .e-jvl-select:hover:not(:focus),
+.e-jvl-chip:hover:not(:disabled), .e-filters-sel:hover, .e-topbar-theme:hover, .e-btn-default:hover:not(:disabled) { border-color: var(--control-line-hover) !important; }
+.e-jv-input:focus, .e-cb-input:focus, .e-jvl-select:focus, .e-login-field input:focus, .e-filters-search:focus-within, .e-topbar-search input:focus,
+.e-jvl-chip:focus-within, .e-jvl-chip:focus-visible { border-color: var(--accent) !important; box-shadow: 0 0 0 3px var(--focus-ring) !important; }
+.e-jv-input[aria-invalid="true"], .e-cb-invalid .e-cb-input { border-color: var(--void) !important; }
+/* Primary action: solid bank-green, square, no glow */
+.e-btn-primary { background: var(--accent) !important; border-color: var(--accent) !important; color: var(--on-accent) !important; border-radius: var(--radius) !important; box-shadow: none !important; }
+.e-btn-primary:hover:not(:disabled) { background: var(--accent-hover) !important; border-color: var(--accent-hover) !important; }
+
+/* Ledger table: header band ruled in ink, figures in fixed cells */
+.e-dt-table th { background: var(--tbl-head-bg); border-bottom: 1px solid var(--accent); }
+.e-dt-table td.e-dt-num, .e-dt-table th.e-dt-num { font-variant-numeric: tabular-nums lining-nums; }
+.e-dt-table td.e-dt-num { color: var(--figure); }
+/* Void: nothing disappears, it cancels */
+.e-dt-table tbody tr.e-dt-void td { color: var(--ink-2); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--void) 70%, transparent); }
+.e-dt-table tbody tr.e-dt-void td:has(.e-badge-void) { text-decoration: none; }
+
+/* Status stamps: ruled, uppercase, nearly square (replace soft pills) */
+.e-badge {
+  background: transparent !important;
+  border: 1px solid currentColor;
+  border-radius: 2px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.e-badge-void {
+  color: var(--void) !important;
+  border: 2px solid var(--void);
+  font-family: var(--font-engraved);
+  letter-spacing: .14em;
+  transform: rotate(-4deg);
+  display: inline-block;
+}
+
+/* Signature move: the counterfoil stub carries the screen's totals */
+.e-cf {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-width: 260px;
+  padding: 14px 18px 14px 30px;
+  background: var(--card);
+  border: 1px solid var(--panel-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.e-cf::before { content: ""; position: absolute; left: 13px; top: 10px; bottom: 10px; border-left: 2px dotted var(--accent); }
+.e-cf-label { font-family: var(--font-engraved); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+.e-cf-figure { font-size: 24px; font-weight: 600; color: var(--figure); font-variant-numeric: tabular-nums lining-nums; letter-spacing: .01em; }
+.e-cf-band {
+  margin-top: 4px;
+  padding: 3px 8px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.e-jvl-top { display: flex; gap: 16px; align-items: stretch; }
+.e-jvl-top > .e-jvl-filters { flex: 1; min-width: 0; }
+@media (max-width: 1100px) { .e-jvl-top { flex-direction: column; } .e-cf { min-width: 0; } }
+/* JV summary and KPI cards read as counterfoils: perforated edge, engraved label, figure in navy ink */
+.e-jv-sum, .e-kpi { padding-left: 30px !important; }
+.e-jv-sum::before, .e-kpi::before { content: ""; position: absolute; left: 13px; top: 10px; bottom: 10px; border-left: 2px dotted var(--accent); }
+.e-jv-sum span, .e-kpi-label { font-family: var(--font-engraved); letter-spacing: .1em; }
+.e-jv-sum b, .e-kpi-value { color: var(--figure); }
+.e-jv-sum-ok { background: var(--ok-bg) !important; border-color: var(--ok) !important; }
+.e-jv-sum-ok::before { border-color: var(--ok); }
+.e-jv-sum-bad { background: var(--bad-bg) !important; border-color: var(--void) !important; }
+.e-jv-sum-bad::before { border-color: var(--void); }
+.e-jv-sum-ok b, .e-jv-sum-ok small { color: var(--ok) !important; }
+.e-jv-sum-bad b, .e-jv-sum-bad small { color: var(--void) !important; }
+.e-kpi-icon { background: var(--accent-bg); color: var(--accent); border-radius: var(--radius-sm); }
+.e-kpi-ok .e-kpi-icon { background: var(--ok-bg); color: var(--ok); }
+.e-kpi-wait .e-kpi-icon { background: var(--wait-bg); color: var(--wait); }
+.e-kpi-bad .e-kpi-icon { background: var(--bad-bg); color: var(--void); }
+.e-kpi-meter { border-radius: 0; background: var(--line-soft); }
+.e-kpi-meter span { border-radius: 0; background: var(--kpi-c, var(--accent)); }
+.e-kpi-ok { --kpi-c: var(--ok); } .e-kpi-wait { --kpi-c: var(--wait); } .e-kpi-bad { --kpi-c: var(--void); } .e-kpi-accent { --kpi-c: var(--accent); }
+
+@media (forced-colors: active) {
+  .e-card, .e-kpi, .e-jv-panel, .e-jvl-filters, .e-fbr-panel, .e-jv-sum, .e-cf { border: 1px solid CanvasText !important; }
+}
+

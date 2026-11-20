@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-20T12:00:00Z",
+  "title": "Design System: E-ACT 360",
+  "extensions": {
+    "colorMeta": {
+      "bank-green": { "role": "primary", "displayName": "Intaglio Bank Green", "canonical": "#0F3D2E", "tonalRamp": ["#06190F", "#0F3D2E", "#175C45", "#2E7A5F", "#5E9C82", "#93BFAA", "#C6DDD0", "#E3ECE5"] },
+      "bank-green-hover": { "role": "primary", "displayName": "Engraver's Green", "canonical": "#175C45", "tonalRamp": ["#0A2A1F", "#124835", "#175C45", "#2B7559", "#56977C", "#8EBBA6", "#C3DCCF", "#EAF3EE"] },
+      "bank-green-wash": { "role": "primary", "displayName": "Green Wash", "canonical": "#E3ECE5" },
+      "cheque-cream": { "role": "primary", "displayName": "Cheque Cream", "canonical": "#F7F3E3", "tonalRamp": ["#3A3522", "#5C5539", "#857C5A", "#AFA684", "#CFC8A9", "#E6E0C7", "#F7F3E3", "#FCFAF2"] },
+      "figure-navy": { "role": "secondary", "displayName": "Figure Navy", "canonical": "#161B2E", "tonalRamp": ["#0B0E19", "#161B2E", "#283050", "#414B72", "#6B7497", "#9DA4BF", "#CDD1E0", "#E8ECF6"] },
+      "rail-gold": { "role": "tertiary", "displayName": "Rail Gold", "canonical": "#C9A227", "tonalRamp": ["#3D300A", "#5E4A0F", "#8A6A12", "#B08A1E", "#C9A227", "#DDBF62", "#EDDCA3", "#F8F0D6"] },
+      "guilloche-gold": { "role": "tertiary", "displayName": "Guilloché Gold", "canonical": "#D8C8A0", "tonalRamp": ["#3B3424", "#5C5236", "#82764F", "#A8996D", "#C6B78A", "#D8C8A0", "#E9DEC4", "#F6F1E4"] },
+      "void-red": { "role": "tertiary", "displayName": "VOID Red", "canonical": "#B42318", "tonalRamp": ["#3E0C08", "#6E160F", "#B42318", "#D2493D", "#F0857A", "#F5B3AB", "#FAD9D5", "#FDF1EF"] },
+      "ok-green": { "role": "neutral", "displayName": "Approved Green", "canonical": "#15803D" },
+      "wait-amber": { "role": "neutral", "displayName": "Open Amber", "canonical": "#B45309" },
+      "ground-grey": { "role": "neutral", "displayName": "Cool Desk Grey", "canonical": "#F4F5F8", "tonalRamp": ["#1E2129", "#3A3F4C", "#5D6474", "#8890A0", "#B9C2D0", "#E1E5EC", "#EEF0F5", "#F4F5F8"] },
+      "ground-wash": { "role": "neutral", "displayName": "Desk Wash", "canonical": "#EEF0F5" },
+      "card-white": { "role": "neutral", "displayName": "Cheque White", "canonical": "#FFFFFF" },
+      "ink": { "role": "neutral", "displayName": "Green-Black Ink", "canonical": "#13261F", "tonalRamp": ["#0A1511", "#13261F", "#2C4238", "#43564E", "#56695F", "#8A9A92", "#C3CEC8", "#E5EEE8"] },
+      "ink-muted": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#43564E" },
+      "ink-faint": { "role": "neutral", "displayName": "Faint Ink", "canonical": "#56695F" },
+      "hairline": { "role": "neutral", "displayName": "Hairline Grey", "canonical": "#E1E5EC" },
+      "row-line": { "role": "neutral", "displayName": "Row Line", "canonical": "#ECEEF3" },
+      "control-line": { "role": "neutral", "displayName": "Control Line", "canonical": "#B9C2D0" },
+      "rail-ink": { "role": "neutral", "displayName": "Rail Ink", "canonical": "#D5E4DB" },
+      "dark-ground": { "role": "neutral", "displayName": "Green-Black Paper (dark)", "canonical": "#0C1512" },
+      "dark-card": { "role": "neutral", "displayName": "Night Card (dark)", "canonical": "#12201A" },
+      "dark-ink": { "role": "neutral", "displayName": "Pale Ink (dark)", "canonical": "#E5EEE8" },
+      "dark-accent": { "role": "primary", "displayName": "Engraved Mint (dark accent)", "canonical": "#86C9A8", "tonalRamp": ["#18302A", "#2E4D40", "#4F7E68", "#6CA88A", "#86C9A8", "#A8DCC1", "#CBEBDA", "#EAF7F0"] },
+      "dark-rail": { "role": "primary", "displayName": "Night Rail (dark)", "canonical": "#0A231A" },
+      "dark-figure": { "role": "secondary", "displayName": "Moon Navy (dark figures)", "canonical": "#E8ECF6" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display figure (Libre Caslon Text)", "purpose": "The one headline figure per dashboard (Cash position); currency prefix in Caslon 400 at 0.42em, muted ink." },
+      "headline": { "displayName": "Engraved headline (Cinzel)", "purpose": "Page titles in bank green; 22px on phones; no label above." },
+      "title": { "displayName": "Engraved title (Cinzel)", "purpose": "Panel, card and classic section heads over a double rule; sign-in heading." },
+      "figure": { "displayName": "Figure (Libre Caslon Text)", "purpose": "Amounts on figure cards (26px), counterfoil cells (24px) and hero breakdowns (20px), navy, lining tabular numerals." },
+      "body": { "displayName": "Body (Inter)", "purpose": "Everything read or typed; tabular numerals on by default; ledger cells at 13px." },
+      "label": { "displayName": "Label (Inter, uppercase)", "purpose": "Figure-card and counterfoil cell labels; ledger header band at 11px." },
+      "stamp": { "displayName": "Stamp (Inter, uppercase)", "purpose": "Ruled status stamps; VOID switches to Cinzel at +0.14em." }
+    },
+    "shadows": [
+      { "name": "paper-rest", "value": "0 1px 0 rgba(15, 61, 46, .06), 0 3px 10px -6px rgba(15, 61, 46, .14)", "purpose": "Every panel, card, figure card, hero and counterfoil at rest." },
+      { "name": "paper-lift", "value": "0 14px 30px -12px rgba(15, 61, 46, .28), 0 2px 6px rgba(15, 61, 46, .08)", "purpose": "Hover on cards and figure cards; menus, search results, classic modals." },
+      { "name": "pinned-column", "value": "4px 0 12px -2px rgba(0, 0, 0, .06)", "purpose": "Edge of the ledger's pinned first column." },
+      { "name": "paper-rest-dark", "value": "0 1px 0 rgba(0, 0, 0, .3), 0 3px 10px -6px rgba(0, 0, 0, .45)", "purpose": "Paper rest in dark mode." },
+      { "name": "paper-lift-dark", "value": "0 16px 34px -12px rgba(0, 0, 0, .6), 0 2px 8px rgba(0, 0, 0, .3)", "purpose": "Paper lift in dark mode." }
+    ],
+    "motion": [
+      { "name": "state-fast", "value": "150ms ease", "purpose": "Border, shadow and hover transitions on cards and controls." },
+      { "name": "figure-card-in", "value": "500ms cubic-bezier(.2, .7, .2, 1), staggered 70ms per card", "purpose": "Figure cards fade and rise 10px on load; off under reduced motion." },
+      { "name": "meter-fill", "value": "1100ms cubic-bezier(.2, .7, .2, 1)", "purpose": "Figure-card meter grows to its value; off under reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "720px" },
+      { "name": "drawer", "value": "960px" },
+      { "name": "stub-stack", "value": "1100px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Solid bank-green action, nearly square, no glow; one per action group.",
+      "html": "<button class=\"ds-btn-primary\">Save voucher</button>",
+      "css": ".ds-btn-primary { height: 38px; padding: 0 14px; border-radius: 3px; border: 1px solid var(--accent, #0F3D2E); background: var(--accent, #0F3D2E); color: var(--on-accent, #F7F3E3); font: 600 14px/1 Inter, system-ui, sans-serif; cursor: pointer; transition: background .15s ease, border-color .15s ease; } .ds-btn-primary:hover { background: var(--accent-hover, #175C45); border-color: var(--accent-hover, #175C45); } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent, #0F3D2E); outline-offset: 2px; }"
+    },
+    {
+      "name": "Default Button",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "White secondary action with a control-line border that leans green on hover.",
+      "html": "<button class=\"ds-btn-default\">Open classic screen</button>",
+      "css": ".ds-btn-default { height: 38px; padding: 0 14px; border-radius: 3px; border: 1px solid var(--line-strong, #B9C2D0); background: var(--card, #FFFFFF); color: var(--ink, #13261F); font: 600 14px/1 Inter, system-ui, sans-serif; cursor: pointer; transition: border-color .15s ease, background .15s ease; } .ds-btn-default:hover { border-color: color-mix(in srgb, #0F3D2E 55%, #B9C2D0); background: var(--bg, #F4F5F8); } .ds-btn-default:focus-visible { outline: 2px solid var(--accent, #0F3D2E); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Standard field; green border and 3px focus ring on focus, VOID red when invalid.",
+      "html": "<label class=\"ds-field\"><span>Description</span><input class=\"ds-input\" placeholder=\"Description\"></label>",
+      "css": ".ds-field { display: grid; gap: 6px; font: 600 14px/1.4 Inter, system-ui, sans-serif; color: var(--ink, #13261F); } .ds-input { height: 38px; padding: 0 11px; border: 1px solid var(--line-strong, #B9C2D0); border-radius: 3px; background: var(--card, #FFFFFF); color: var(--ink, #13261F); font: 400 14px Inter, system-ui, sans-serif; caret-color: #0F3D2E; transition: border-color .15s ease, box-shadow .15s ease; } .ds-input::placeholder { color: #56695F; } .ds-input:hover:not(:focus) { border-color: color-mix(in srgb, #0F3D2E 55%, #B9C2D0); } .ds-input:focus { outline: none; border-color: var(--accent, #0F3D2E); box-shadow: 0 0 0 3px color-mix(in srgb, #0F3D2E 22%, transparent); } .ds-input[aria-invalid=\"true\"] { border-color: #B42318; }"
+    },
+    {
+      "name": "Bank-Green Rail",
+      "kind": "nav",
+      "refersTo": "rail",
+      "description": "Side rail: engraved brand, gold double rule on its edge, gold Cinzel groups, active item on cheque white with a gold bar.",
+      "html": "<nav class=\"ds-rail\"><div class=\"ds-rail-brand\">E-ACT 360</div><div class=\"ds-rail-grp\">Accounts</div><a class=\"ds-rail-link\" href=\"#\">Chart of accounts</a><a class=\"ds-rail-link ds-rail-on\" href=\"#\" aria-current=\"page\">Journal vouchers</a><a class=\"ds-rail-link\" href=\"#\">New journal voucher</a></nav>",
+      "css": ".ds-rail { width: 248px; padding: 18px 14px; background: #0F3D2E; border-right: 3px double #C9A227; color: #D5E4DB; font: 500 14px/1.4 Inter, system-ui, sans-serif; display: flex; flex-direction: column; gap: 2px; } .ds-rail-brand { font: 700 19px Cinzel, 'Times New Roman', serif; letter-spacing: .08em; color: #F7F3E3; padding-bottom: 16px; margin-bottom: 8px; border-bottom: 1px solid color-mix(in srgb, #C9A227 55%, transparent); } .ds-rail-grp { font: 600 12px Cinzel, 'Times New Roman', serif; letter-spacing: .12em; text-transform: uppercase; color: #C9A227; margin: 14px 10px 6px; } .ds-rail-link { position: relative; display: block; padding: 8px 10px; border-radius: 2px; color: #D5E4DB; text-decoration: none; transition: background .15s ease; } .ds-rail-link:hover { background: color-mix(in srgb, #D5E4DB 10%, transparent); color: #F7F3E3; } .ds-rail-link:focus-visible { outline: 2px solid #F7F3E3; outline-offset: 2px; } .ds-rail-on { background: #FFFFFF; color: #0F3D2E; font-weight: 700; } .ds-rail-on::before { content: ''; position: absolute; left: -14px; top: 6px; bottom: 6px; width: 3px; background: #C9A227; }"
+    },
+    {
+      "name": "Status Stamps",
+      "kind": "chip",
+      "refersTo": "stamp",
+      "description": "Ruled uppercase status stamps; VOID is red, Cinzel and rotated.",
+      "html": "<span class=\"ds-stamp ds-stamp-ok\">Approved</span> <span class=\"ds-stamp ds-stamp-wait\">Open</span> <span class=\"ds-stamp ds-stamp-bad\">Rejected</span> <span class=\"ds-stamp ds-stamp-void\">Void</span>",
+      "css": ".ds-stamp { display: inline-block; padding: 1px 8px; border: 1px solid currentColor; border-radius: 2px; background: transparent; font: 700 11px/18px Inter, system-ui, sans-serif; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; } .ds-stamp-ok { color: #065F46; } .ds-stamp-wait { color: #92400E; } .ds-stamp-bad { color: #991B1B; } .ds-stamp-void { color: #B42318; border-width: 2px; font-family: Cinzel, 'Times New Roman', serif; letter-spacing: .14em; transform: rotate(-4deg); }"
+    },
+    {
+      "name": "Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Cheque-white panel in one hairline outline; Cinzel title over a double green rule.",
+      "html": "<section class=\"ds-panel\"><h2 class=\"ds-panel-head\">Search filters</h2><p class=\"ds-panel-body\">Branch, status and date range.</p></section>",
+      "css": ".ds-panel { background: #FFFFFF; border: 1px solid #E1E5EC; border-radius: 10px; box-shadow: 0 1px 0 rgba(15,61,46,.06), 0 3px 10px -6px rgba(15,61,46,.14); overflow: hidden; transition: box-shadow .15s ease; } .ds-panel:hover { box-shadow: 0 14px 30px -12px rgba(15,61,46,.28), 0 2px 6px rgba(15,61,46,.08); } .ds-panel-head { margin: 0; padding: 14px 18px; font: 700 15px Cinzel, 'Times New Roman', serif; letter-spacing: .06em; color: #0F3D2E; border-bottom: 3px double #0F3D2E; } .ds-panel-body { margin: 0; padding: 16px 18px; font: 400 14px/1.5 Inter, system-ui, sans-serif; color: #43564E; }"
+    },
+    {
+      "name": "Figure Card",
+      "kind": "card",
+      "refersTo": "figure-card",
+      "description": "Tracked uppercase label, bold Caslon navy figure, state line with a ruled stamp.",
+      "html": "<article class=\"ds-kpi\"><p class=\"ds-kpi-label\">Sales tax payable</p><p class=\"ds-kpi-value\">PKR 4.81m</p><p class=\"ds-kpi-foot\"><span class=\"ds-kpi-stamp\">Due 18 Dec</span> 31 days</p></article>",
+      "css": ".ds-kpi { max-width: 360px; padding: 18px 20px; background: #FFFFFF; border: 1px solid #E1E5EC; border-radius: 10px; box-shadow: 0 1px 0 rgba(15,61,46,.06), 0 3px 10px -6px rgba(15,61,46,.14); transition: box-shadow .15s ease, transform .15s ease; } .ds-kpi:hover { box-shadow: 0 14px 30px -12px rgba(15,61,46,.28), 0 2px 6px rgba(15,61,46,.08); transform: translateY(-1px); } .ds-kpi-label { margin: 0; font: 600 12px/1.35 Inter, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: #43564E; } .ds-kpi-value { margin: 6px 0 8px; font: 700 26px/1.2 'Libre Caslon Text', Georgia, serif; letter-spacing: -.01em; color: #161B2E; font-variant-numeric: lining-nums tabular-nums; } .ds-kpi-foot { margin: 0; display: flex; gap: 6px; align-items: center; font: 400 12px Inter, system-ui, sans-serif; color: #43564E; } .ds-kpi-stamp { padding: 1px 8px; border: 1px solid #161B2E; border-radius: 2px; font-weight: 700; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #161B2E; }"
+    },
+    {
+      "name": "Counterfoil Stub",
+      "kind": "custom",
+      "refersTo": "counterfoil",
+      "description": "Signature: one perforated stub per screen carrying its totals and counts.",
+      "html": "<aside class=\"ds-cf\"><p class=\"ds-cf-label\">List total</p><p class=\"ds-cf-figure\">Rs. 6,491,860.00</p><p class=\"ds-cf-band\"><span>11 records</span><span>4 approved</span><span>4 open</span><span>1 rejected</span></p></aside>",
+      "css": ".ds-cf { position: relative; max-width: 340px; padding: 14px 18px 14px 30px; background: #FFFFFF; border: 1px solid #E1E5EC; border-radius: 10px; box-shadow: 0 1px 0 rgba(15,61,46,.06), 0 3px 10px -6px rgba(15,61,46,.14); } .ds-cf::before { content: ''; position: absolute; left: 13px; top: 10px; bottom: 10px; border-left: 2px dotted #0F3D2E; } .ds-cf-label { margin: 0; font: 700 11px Cinzel, 'Times New Roman', serif; letter-spacing: .12em; text-transform: uppercase; color: #43564E; } .ds-cf-figure { margin: 4px 0; font: 700 24px 'Libre Caslon Text', Georgia, serif; color: #161B2E; font-variant-numeric: lining-nums tabular-nums; } .ds-cf-band { margin: 4px 0 0; padding: 3px 8px; border-top: 1px solid #E1E5EC; display: flex; flex-wrap: wrap; column-gap: 16px; row-gap: 2px; font: 600 12px Inter, system-ui, sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #0F3D2E; } .ds-cf-band span { white-space: nowrap; }"
+    },
+    {
+      "name": "Ledger Row with Void",
+      "kind": "custom",
+      "refersTo": "stamp-void",
+      "description": "Ledger rows: uppercase header band ruled in green, navy right-aligned figures, void row struck through under an unstruck VOID stamp.",
+      "html": "<table class=\"ds-ledger\"><thead><tr><th>Code</th><th>Status</th><th class=\"ds-num\">Amount (Rs.)</th></tr></thead><tbody><tr><td>JV-1045</td><td><span class=\"ds-st\">Approved</span></td><td class=\"ds-num\">56,000.00</td></tr><tr class=\"ds-void\"><td>JV-1046</td><td class=\"ds-keep\"><span class=\"ds-st ds-st-void\">Void</span></td><td class=\"ds-num\">19,900.00</td></tr></tbody></table>",
+      "css": ".ds-ledger { border-collapse: collapse; width: 100%; max-width: 520px; background: #FFFFFF; font: 400 13px Inter, system-ui, sans-serif; color: #13261F; font-variant-numeric: tabular-nums; } .ds-ledger th { background: #F4F5F8; border-bottom: 1px solid #0F3D2E; padding: 10px 14px; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #43564E; text-align: left; } .ds-ledger td { padding: 14px; border-bottom: 1px solid #ECEEF3; } .ds-ledger tbody tr:hover td { background: #F6F7FA; } .ds-num { text-align: right !important; } td.ds-num { color: #161B2E; } .ds-void td { color: #43564E; text-decoration: line-through; text-decoration-color: color-mix(in srgb, #B42318 70%, transparent); } .ds-void td.ds-keep { text-decoration: none; } .ds-st { display: inline-block; padding: 1px 8px; border: 1px solid currentColor; border-radius: 2px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #065F46; } .ds-st-void { color: #B42318; border-width: 2px; font-family: Cinzel, 'Times New Roman', serif; letter-spacing: .14em; transform: rotate(-4deg); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Cheque & Counterfoil",
+    "overview": "Every screen is a leaf from a bank cheque book. Engraved bank-green ink carries the rail, titles, rules and primary actions; the figures that matter are printed in a bold Caslon serif in near-black navy; the screen's totals sit on a perforated counterfoil stub beside the work. The world is Intaglio read through banking paper, but the ground stays a plain cool grey: the user chose a calm, legible desk over a security-tinted sheet, and the money cues live in the ink, the lettering, the rosette and the stub, not in pattern noise.\n\nDensity is operational. Accountants, owners and FBR agents enter vouchers, filter lists and post invoices all day, so controls stay standard (fields, selects, tables, buttons) and the world sits on top of them as lettering, rules and stamps. Nothing disappears: a voided record stays in the ledger, struck through, under a rotated VOID stamp. The same world is injected into 971 legacy WebForms pages through the classic skin, so every rule here must be expressible as a reskin of Bootstrap panels, labels and DataTables as well as React components.\n\nConfirmed rejections: the white-cards-and-one-blue-accent ERP, the earlier Executive Slate scheme and its colour/glass layer, glass, blur and gradient fills, a security-tint pattern on the ground, and labels stacked above page titles.",
+    "keyCharacteristics": [
+      "Bank-green rail (248px) with a gold double rule on its right edge and engraved Cinzel group names in gold.",
+      "Plain cool-grey ground; white panels in one hairline outline with gently rounded corners (10px).",
+      "Engraved roman capitals (Cinzel) for page, panel and rail titles only; Inter for everything you read or type.",
+      "Big bold Libre Caslon figures with a lighter, smaller currency; tabular lining numerals everywhere.",
+      "One perforated counterfoil stub per screen carries its totals.",
+      "Status as ruled uppercase stamps, never filled pills; VOID in red, rotated, records kept visible.",
+      "A pale-gold guilloché rosette bleeds off the right edge of the dashboard's lead widgets only.",
+      "Ink-dark green-black dark mode with the same structure."
+    ],
+    "rules": [
+      { "name": "The Two Inks Rule", "body": "Green is for structure and action, navy is for money. An amount is never green, and a title is never navy.", "section": "colors" },
+      { "name": "The Gold Belongs to Engraving Rule", "body": "Rail gold appears only on the green rail and guilloché gold only in the rosette. Neither carries text on white.", "section": "colors" },
+      { "name": "The Cancel, Don't Delete Rule", "body": "VOID red marks cancellation and rejection only; void records stay in the list, struck through at 70% red, with the stamp left unstruck.", "section": "colors" },
+      { "name": "The Not-By-Colour-Alone Rule", "body": "The accent sits close to body ink, so state never relies on it: the active rail item also gets a white fill and a gold bar, links are bold and underline on hover, and balance states carry words (\"No lines yet\", \"Out by …\") beside their colour.", "section": "colors" },
+      { "name": "The Engraved Titles Only Rule", "body": "Cinzel names things (page, panel, rail group, counterfoil label, sign-in, VOID). It never sets body text, figures, buttons or field values.", "section": "typography" },
+      { "name": "The Caslon Is Money Rule", "body": "Libre Caslon sets amounts and counts on figure cards, the hero and the counterfoil. Ledger table numbers stay in Inter, right-aligned and tabular.", "section": "typography" },
+      { "name": "The Bare Title Rule", "body": "No label, kicker or eyebrow sits above a page title. The title is the first line; context goes in the subtitle or the breadcrumb.", "section": "typography" },
+      { "name": "The Green-Tinted Shadow Rule", "body": "Shadows are tinted with bank green, never neutral grey or coloured glow, and never offset hard.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do take every colour from the tokens in `src/styles/eact.css` section 2, and keep the dark set in step with the light one.",
+      "Do set page, panel and rail titles in Cinzel and every amount on cards, hero and counterfoil in bold Libre Caslon with lining tabular numerals.",
+      "Do put the screen's totals on one counterfoil stub, and only one per screen.",
+      "Do keep void records visible: strike the row in red at 70% and leave the rotated VOID stamp unstruck.",
+      "Do open sections with a 3px double rule and draw everything else with one-pixel hairlines.",
+      "Do give state a second signal besides the accent: a fill, a bar, weight, an underline or words.",
+      "Do reskin legacy pages through section 9 rules that start with `html[data-eact-shell]`, using the same tokens."
+    ],
+    "donts": [
+      "Don't put a security-tint or pantograph pattern on the ground; it stays plain cool grey (#F4F5F8).",
+      "Don't place a label, kicker or eyebrow above a page title.",
+      "Don't use glass, backdrop blur or gradient fills on any surface.",
+      "Don't render status as filled pastel pills; status is a ruled stamp.",
+      "Don't spread the guilloché rosette beyond the Cash position hero and the Sales tax payable and Receivables cards, or let it sit under text or a meter.",
+      "Don't set gold text on white; gold is for the rail and the rosette.",
+      "Don't colour amounts green or titles navy.",
+      "Don't delete or hide a voided or rejected record from a list."
+    ]
+  }
+}

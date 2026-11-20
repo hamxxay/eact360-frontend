@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Proof Sheet · Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ground:#F5F4F6;--ink:#16181A;--ink-2:#55585D;--hair:#C9C7C4;--hair-2:#E2E0DE;--seal:#5B5FC7;--seal-bg:#DCDDF3;--ok:#2F6F4E;--wait:#8A5D00;--bad:#B23A2A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:15px/1.45 'Hanken Grotesk',sans-serif;color:var(--ink);background:radial-gradient(900px 600px at 0 0,#FAF6F5,transparent),radial-gradient(900px 600px at 100% 100%,#EEF3EF,transparent),var(--ground);font-variant-numeric:tabular-nums}
+::selection{background:var(--seal-bg)}
+.mono{font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase}
+.bar{height:64px;display:flex;align-items:center;gap:28px;padding:0 40px;border-bottom:1px solid var(--hair)}
+.bar .brand{font:600 18px 'Hanken Grotesk'}
+.bar .crumb{color:var(--ink-2)}.bar .crumb b{color:var(--ink);font-weight:500}
+.bar .search{margin-left:auto;width:300px;height:36px;border:1px solid var(--hair);display:flex;align-items:center;padding:0 12px;color:var(--ink-2);font-size:14px}
+.bar .me{width:34px;height:34px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;font-size:12px;font-weight:600}
+.wrap{display:grid;grid-template-columns:220px 1fr;height:836px}
+nav{border-right:1px solid var(--hair);padding:26px 0}
+nav .g{padding:0 28px 10px;color:var(--ink-2)}
+nav a{display:block;padding:8px 28px;color:var(--ink);text-decoration:none}
+nav a.on{background:var(--ink);color:#fff}
+nav .gap{height:20px}
+main{padding:30px 40px;min-width:0}
+.head{display:flex;align-items:flex-end}
+h1{font:400 56px/1 'Hanken Grotesk';letter-spacing:-.02em}.head p{color:var(--ink-2);margin-top:12px}
+.head .per{margin-left:auto;display:flex;border:1px solid var(--ink)}
+.head .per span{padding:10px 14px}.head .per span.on{background:var(--ink);color:#fff}
+.plates{display:grid;grid-template-columns:repeat(4,1fr);margin-top:24px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.plate{position:relative;padding:18px 22px 16px;border-left:1px solid var(--hair)}.plate:first-child{border-left:0}
+.plate:before,.plate:after{content:"+";position:absolute;font:400 14px/1 'JetBrains Mono';color:var(--ink-2)}
+.plate:before{top:-8px;left:-5px}.plate:after{bottom:-8px;left:-5px}
+.plate span{color:var(--ink-2)}
+.plate strong{display:block;font:400 42px/1 'Hanken Grotesk';letter-spacing:-.02em;margin-top:12px}
+.plate small{display:block;font-size:13px;margin-top:6px}
+.ok{color:var(--ok)}.wait{color:var(--wait)}.bad{color:var(--bad)}
+.row{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;margin-top:26px}
+h2{display:flex;align-items:baseline;padding-bottom:10px;border-bottom:1px solid var(--ink);margin-bottom:12px;font-weight:500;font-size:17px}
+h2 .mono{margin-left:auto;color:var(--ink-2)}
+.bars{display:flex;align-items:flex-end;gap:10px;height:190px;border-bottom:1px solid var(--ink);background:linear-gradient(var(--hair-2) 1px,transparent 1px) 0 0/100% 47px}
+.bars i{flex:1;background:var(--ink)}.bars i.s{background:var(--hair)}.bars i.t{background:var(--seal)}
+.days{display:flex;gap:10px;color:var(--ink-2);padding-top:6px}.days span{flex:1;text-align:center;font:500 11px 'JetBrains Mono'}
+table{width:100%;border-collapse:collapse}td{padding:9px 0;border-bottom:1px solid var(--hair-2)}.n{text-align:right;font-weight:500}
+.filed{display:flex;align-items:center;gap:14px;margin-top:18px;padding-top:14px;border-top:1px solid var(--hair-2)}
+.filed p{color:var(--ink-2);font-size:14px}.filed b{color:var(--ink);font-weight:500;display:block}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:22px}
+</style>
+<script src="../palette-switcher.js" data-design="proof-sheet"></script></head><body>
+<header class="bar"><span class="brand">E-ACT 360</span><span class="mono crumb">Work / <b>Dashboard</b></span><span class="mono crumb">Saffron Textiles · Lahore · Nov 2026</span><div class="search">Search invoice, buyer or NTN</div><div class="me">AR</div></header>
+<div class="wrap">
+<nav><div class="mono g">Work</div><a href="dashboard.html" class="on">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a><div class="gap"></div>
+<div class="mono g">Compliance</div><a href="invoices.html">FBR digital invoices</a><a href="#">Provincial invoices</a><a href="#">Annexure-C</a><div class="gap"></div>
+<div class="mono g">People</div><a href="#">Payroll</a><a href="#">Reports</a></nav>
+<main>
+  <section class="head"><div><h1>Dashboard</h1><p>Monday 17 November 2026, figures to 14:00</p></div><div class="per mono"><span>Today</span><span class="on">Month</span><span>Year</span></div></section>
+  <section class="plates">
+    <div class="plate"><span class="mono">Sales</span><strong>46.6m</strong><small class="ok">+6.2% on October</small></div>
+    <div class="plate"><span class="mono">Sales tax payable</span><strong>4.81m</strong><small>due 18 December</small></div>
+    <div class="plate"><span class="mono">Cash and bank</span><strong>12.9m</strong><small class="bad">−1.6m since yesterday</small></div>
+    <div class="plate"><span class="mono">Receivables</span><strong>21.3m</strong><small class="wait">1.6m over 90 days</small></div>
+  </section>
+  <section class="row">
+    <div><h2>Sales by day<span class="mono">PKR m · 1–17 Nov</span></h2>
+      <div class="bars"><i class="s" style="height:10%"></i><i style="height:88%"></i><i style="height:76%"></i><i style="height:71%"></i><i style="height:83%"></i><i style="height:93%"></i><i style="height:54%"></i><i class="s" style="height:7%"></i><i style="height:85%"></i><i style="height:80%"></i><i style="height:100%"></i><i style="height:78%"></i><i style="height:95%"></i><i style="height:63%"></i><i class="s" style="height:12%"></i><i style="height:95%"></i><i class="t" style="height:46%"></i></div>
+      <div class="days"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div></div>
+    <div><h2>FBR digital invoices<span class="mono">November</span></h2><table>
+      <tr><td>Posted and verified</td><td class="n ok">128</td></tr><tr><td>Waiting for 11:00 run</td><td class="n wait">14</td></tr><tr><td>Rejected, need correction</td><td class="n bad">3</td></tr><tr><td>Drafts</td><td class="n">22</td></tr></table>
+      <div class="filed"><svg width="56" height="56" viewBox="0 0 40 40"><defs><path id="rs" d="M20 20m-15 0a15 15 0 1 1 30 0a15 15 0 1 1 -30 0"/></defs><circle cx="20" cy="20" r="19" style="fill:var(--seal-bg)"/><circle cx="20" cy="20" r="10" fill="none" style="stroke:var(--seal)"/><text font-family="JetBrains Mono" font-size="5" letter-spacing="1" style="fill:var(--seal)"><textPath href="#rs">RETURN FILED · OCTOBER 2026 ·</textPath></text></svg>
+        <p><b>October sales tax return filed</b>15 November 2026 · PKR 4,236,100 paid</p></div></div>
+  </section>
+  <section class="row2">
+    <div><h2>Receivables ageing<span class="mono">PKR m</span></h2><table><tr><td>0–30 days</td><td class="n">9.8</td></tr><tr><td>31–60 days</td><td class="n">7.3</td></tr><tr><td>61–90 days</td><td class="n wait">2.6</td></tr><tr><td>Over 90 days</td><td class="n bad">1.6</td></tr></table></div>
+    <div><h2>Banks<span class="mono">PKR, today</span></h2><table><tr><td>HBL main</td><td class="n">6,214,900</td></tr><tr><td>Meezan</td><td class="n">4,102,500</td></tr><tr><td>MCB</td><td class="n">1,889,000</td></tr><tr><td>Cash in hand</td><td class="n">700,000</td></tr></table></div>
+  </section>
+</main></div>
+</body></html>

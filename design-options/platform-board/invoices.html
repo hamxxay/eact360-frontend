@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Platform Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rail:#0F4C5C;--rail-2:#17606F;--board:#0B3945;--signal:#FF7A59;--ground:#F2F6F6;--sheet:#FFFFFF;--ink:#0F1E22;--ink-2:#47595D;--rule:#D6E0E1;--ok:#2F7D55;--wait:#9A6B00;--bad:#C8402F}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:14px/1.45 Barlow,sans-serif;color:var(--ink);background:var(--ground);display:grid;grid-template-columns:232px 1fr;font-variant-numeric:tabular-nums}
+::selection{background:var(--signal);color:var(--ink)}
+.rail{background:var(--rail);color:#E6F1F3;padding:22px 14px;display:flex;flex-direction:column;gap:4px}
+.brand{font:700 26px/1 'Barlow Condensed';letter-spacing:.01em;color:#fff;padding:0 10px 22px}
+.brand span{color:var(--signal)}
+.rail a{display:flex;justify-content:space-between;padding:9px 10px;border-radius:6px;color:#CFE3E6;text-decoration:none;font-weight:500}
+.rail a.on{background:var(--rail-2);color:#fff}
+.rail a.on b{background:var(--signal);color:var(--ink);font:700 12px/1 'Barlow Condensed';padding:4px 7px;border-radius:4px}
+.rail .grp{font:600 12px 'Barlow Condensed';letter-spacing:.08em;text-transform:uppercase;color:color-mix(in srgb,var(--rail-2) 30%,#fff);padding:18px 10px 6px}
+.rail .foot{margin-top:auto;padding:12px 10px;font-size:12px;color:color-mix(in srgb,var(--rail-2) 29%,#fff);border-top:1px solid color-mix(in srgb,var(--rail-2) 94%,#fff)}
+main{display:flex;flex-direction:column;min-width:0}
+.top{height:60px;display:flex;align-items:center;gap:28px;padding:0 32px;border-bottom:1px solid var(--rule);background:var(--sheet)}
+.top .co{font-weight:600}.top .meta{color:var(--ink-2)}
+.top .search{margin-left:auto;width:300px;height:36px;border:1px solid var(--rule);border-radius:6px;display:flex;align-items:center;gap:8px;padding:0 12px;color:var(--ink-2)}
+.top .me{width:34px;height:34px;border-radius:50%;background:var(--rail);color:#fff;display:grid;place-items:center;font-weight:600;font-size:13px}
+.head{display:flex;align-items:flex-end;padding:26px 32px 18px;gap:16px}
+.head h1{font:600 34px/1 'Barlow Condensed';letter-spacing:.005em}
+.head p{color:var(--ink-2);margin-top:6px}
+.btns{margin-left:auto;display:flex;gap:10px}
+.btn{height:38px;padding:0 16px;border-radius:6px;border:1px solid var(--rule);background:var(--sheet);font:600 14px Barlow;color:var(--ink);display:flex;align-items:center}
+.btn.primary{background:var(--rail);border-color:var(--rail);color:#fff}
+.board{margin:0 32px;background:var(--board);border-radius:10px;color:#E4EFF1;display:grid;grid-template-columns:260px 1fr}
+.tally{padding:22px 24px;border-right:1px solid color-mix(in srgb,var(--rail) 95%,var(--rule));display:grid;gap:14px}
+.tally h2{font:600 15px 'Barlow Condensed';letter-spacing:.08em;text-transform:uppercase;color:color-mix(in srgb,var(--rail-2) 39%,#fff)}
+.tally .big{display:flex;align-items:baseline;gap:10px}
+.tally .big strong{font:600 54px/1 'Barlow Condensed';color:#fff}
+.tally .row{display:flex;gap:22px}
+.tally .row div strong{display:block;font:600 30px/1 'Barlow Condensed'}
+.tally .row span,.tally .big span{color:color-mix(in srgb,var(--rail-2) 39%,#fff);font-size:13px}
+.y{color:#F2C94C}.r{color:color-mix(in srgb,var(--signal) 84%,#fff)}
+.dep{padding:14px 22px 16px}
+.dep .th,.dep .tr{display:grid;grid-template-columns:52px 150px 1fr 140px 210px 130px;align-items:center;gap:12px}
+.dep .th{font:600 12px 'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase;color:color-mix(in srgb,var(--rail-2) 46%,#fff);padding:6px 10px 8px;border-bottom:1px solid color-mix(in srgb,var(--rail) 95%,var(--rule))}
+.dep .tr{padding:10px;border-bottom:1px solid color-mix(in srgb,var(--rail-2) 63%,var(--ink));font:500 20px/1 'Barlow Condensed'}
+.dep .tr .buyer{font:500 15px Barlow;color:#CFE3E6}
+.dep .tr.changed{background:var(--signal);color:var(--ink);border-radius:6px;border:0}
+.dep .tr.changed .buyer{color:var(--ink)}
+.ack{font:600 13px Barlow;background:var(--ink);color:#fff;border-radius:5px;padding:6px 10px;justify-self:start}
+.list{margin:20px 32px 0;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;overflow:hidden;flex:1}
+.bar{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--rule)}
+.chip{height:32px;padding:0 12px;border:1px solid var(--rule);border-radius:6px;display:flex;align-items:center;gap:6px;font-weight:500;color:var(--ink-2)}
+.chip b{color:var(--ink)}
+.guide{margin-left:auto;font:600 15px 'Barlow Condensed';letter-spacing:.04em;color:var(--ink-2)}
+.guide b{color:var(--ink)}
+table{width:100%;border-collapse:collapse}
+th{font:600 12px 'Barlow Condensed';letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);text-align:left;padding:10px 16px;background:#F5F8F8;border-bottom:1px solid var(--rule)}
+td{padding:11px 16px;border-bottom:1px solid #E8EEEF}
+td.n,th.n{text-align:right}
+td.inv{font:600 16px 'Barlow Condensed';letter-spacing:.02em}
+.st{font-weight:600}.st.ok{color:var(--ok)}.st.wait{color:var(--wait)}.st.bad{color:var(--bad)}
+.why{display:block;font-size:12px;font-weight:500;color:var(--ink-2)}
+.box{width:16px;height:16px;border:1.5px solid #A6B5B8;border-radius:4px}
+</style>
+<script src="../palette-switcher.js" data-design="platform-board"></script></head><body>
+<nav class="rail">
+  <div class="brand">E-ACT <span>360</span></div>
+  <a href="dashboard.html">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a>
+  <div class="grp">Compliance</div>
+  <a href="invoices.html" class="on">FBR digital invoices <b>3</b></a><a href="#">Provincial invoices</a><a href="#">Annexure-C</a>
+  <div class="grp">People</div><a href="#">Payroll</a><a href="#">Reports</a>
+  <div class="foot">Saffron Textiles (Pvt) Ltd<br>Lahore head office</div>
+</nav>
+<main>
+  <header class="top"><span class="co">Saffron Textiles (Pvt) Ltd</span><span class="meta">Branch: Lahore head office</span><span class="meta">Period: Nov 2026 · FY 2026-27</span><div class="search">Search invoice, buyer or NTN</div><div class="me">AR</div></header>
+  <section class="head"><div><h1>FBR digital invoices</h1><p>Monday 17 November 2026 · sandbox off · live posting on</p></div>
+    <div class="btns"><span class="btn">Import invoices</span><span class="btn">New invoice</span><span class="btn primary">Post 14 waiting to FBR</span></div></section>
+  <section class="board">
+    <div class="tally"><h2>Today's posting board</h2>
+      <div class="big"><strong>128</strong><span>posted to FBR</span></div>
+      <div class="row"><div><strong class="y">14</strong><span>waiting</span></div><div><strong class="r">3</strong><span>rejected</span></div><div><strong>22</strong><span>drafts</span></div></div></div>
+    <div class="dep">
+      <div class="th"><span>Seq</span><span>Invoice</span><span>Buyer</span><span>Value PKR</span><span>FBR status</span><span>Time</span></div>
+      <div class="tr changed"><span>0129</span><span>INV-2026-0441</span><span class="buyer">Mehran Foods (Pvt) Ltd</span><span>1,284,600</span><span>REJECTED · NTN inactive</span><span class="ack">Acknowledge</span></div>
+      <div class="tr"><span>0128</span><span>INV-2026-0439</span><span class="buyer">Shaheen Traders</span><span>98,400</span><span>POSTED</span><span>10:42</span></div>
+      <div class="tr"><span>0127</span><span>INV-2026-0438</span><span class="buyer">Al-Noor Textiles</span><span>2,410,000</span><span>POSTED</span><span>10:39</span></div>
+      <div class="tr"><span>—</span><span>INV-2026-0440</span><span class="buyer">Indus Pharma (Pvt) Ltd</span><span>642,300</span><span class="y">WAITING</span><span>next run 11:00</span></div>
+    </div>
+  </section>
+  <section class="list">
+    <div class="bar"><span class="chip">Date <b>1–17 Nov 2026</b></span><span class="chip">Status <b>All</b></span><span class="chip">Buyer <b>Any</b></span><span class="chip">Province <b>Punjab</b></span>
+      <span class="guide"><b>INV-2026-0434</b> → <b>INV-2026-0441</b> · 8 of 167</span></div>
+    <table><thead><tr><th style="width:44px"></th><th>Invoice</th><th>Buyer</th><th>NTN</th><th>Date</th><th class="n">Value PKR</th><th class="n">Sales tax PKR</th><th>FBR status</th></tr></thead><tbody>
+      <tr><td><div class="box"></div></td><td class="inv">INV-2026-0441</td><td>Mehran Foods (Pvt) Ltd</td><td>4271093-6</td><td>17 Nov</td><td class="n">1,284,600</td><td class="n">231,228</td><td class="st bad">Rejected<span class="why">Buyer NTN not active</span></td></tr>
+      <tr><td><div class="box"></div></td><td class="inv">INV-2026-0440</td><td>Indus Pharma (Pvt) Ltd</td><td>3318520-1</td><td>16 Nov</td><td class="n">642,300</td><td class="n">115,614</td><td class="st wait">Waiting</td></tr>
+      <tr><td><div class="box"></div></td><td class="inv">INV-2026-0439</td><td>Shaheen Traders</td><td>1190447-8</td><td>16 Nov</td><td class="n">98,400</td><td class="n">17,712</td><td class="st ok">Posted</td></tr>
+      <tr><td><div class="box"></div></td><td class="inv">INV-2026-0438</td><td>Al-Noor Textiles</td><td>2054871-3</td><td>15 Nov</td><td class="n">2,410,000</td><td class="n">433,800</td><td class="st ok">Posted</td></tr>
+      <tr><td><div class="box"></div></td><td class="inv">INV-2026-0437</td><td>Zubair &amp; Sons</td><td>0871236-9</td><td>14 Nov</td><td class="n">56,250</td><td class="n">10,125</td><td class="st ok">Posted</td></tr>
+    </tbody></table>
+  </section>
+</main>
+</body></html>

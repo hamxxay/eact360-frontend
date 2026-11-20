@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Dense Mosaic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--ink-2:#5A5A5A;--red:#D7000F;--neg:#D7000F;--line:#D9D9D9;--fill:#F3F3F3;--ok:#0B7A3E;--wait:#A05F00}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:13px/1.4 'Noto Sans',sans-serif;color:var(--ink);background:#fff;font-variant-numeric:tabular-nums}
+::selection{background:color-mix(in srgb,var(--red) 16%,#fff)}
+.nav1{height:44px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:4px;padding:0 20px}
+.nav1 .logo{font-weight:700;font-size:17px;margin-right:18px}.nav1 .logo b{color:color-mix(in srgb,var(--red) 62%,#fff)}
+.nav1 a{color:#ddd;text-decoration:none;padding:6px 10px;font-weight:500}
+.nav1 a.on{background:var(--red);color:#fff}
+.nav1 .r{margin-left:auto;color:#bbb}
+.nav2{height:34px;background:var(--fill);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:0 20px;color:var(--ink-2)}
+.nav2 b{color:var(--ink)}
+.nav2 .s{margin-left:auto;width:260px;height:24px;border:1px solid var(--line);background:#fff;padding:0 8px;display:flex;align-items:center}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:min-content;gap:10px;padding:12px 20px}
+.m{border:1px solid var(--line)}
+.m:hover{border-color:var(--ink)}
+.m .tab{display:flex;align-items:center;border-bottom:1px solid var(--line)}
+.m .tab span{background:var(--red);color:#fff;font-weight:700;padding:4px 10px}
+.m .tab em{font-style:normal;color:var(--ink-2);margin-left:auto;padding-right:8px;font-size:12px}
+.m .b{padding:8px 10px}
+.big{font-size:26px;font-weight:700;line-height:1.1}
+.big small{font-size:13px;font-weight:500;color:var(--ink-2);margin-left:4px}
+.up{color:var(--ok);font-weight:700}.down{color:var(--neg);font-weight:700}.wait{color:var(--wait);font-weight:700}
+table{width:100%;border-collapse:collapse}
+td{padding:4px 0;border-bottom:1px dotted var(--line)}
+tr:last-child td{border-bottom:0}
+.n{text-align:right}
+.w2{grid-column:span 2}
+.bars{display:flex;align-items:flex-end;gap:4px;height:92px;border-bottom:1px solid var(--ink);margin-top:6px}
+.bars i{flex:1;background:var(--ink)}.bars i.s{background:#C8C8C8}.bars i.t{background:var(--red)}
+.lbl{display:flex;justify-content:space-between;color:var(--ink-2);font-size:11px;margin-top:2px}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:0 5px;border:1px solid currentColor;margin-left:4px}
+.age{display:flex;height:14px;margin:6px 0}
+.age i{display:block}
+</style>
+<script src="../palette-switcher.js" data-design="dense-mosaic"></script></head><body>
+<header class="nav1"><span class="logo">E-ACT <b>360</b></span><a class="on" href="dashboard.html">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a><a href="invoices.html">FBR</a><a href="#">Provincial</a><a href="#">Payroll</a><a href="#">Reports</a><span class="r">Saffron Textiles (Pvt) Ltd · Lahore · AR</span></header>
+<div class="nav2"><b>Dashboard</b><span>Mon 17 Nov 2026, 14:00</span><span>Period: Nov 2026</span><span>FY 2026-27</span><div class="s">Search invoices, buyers, items…</div></div>
+<section class="mosaic">
+  <div class="m"><div class="tab"><span>Sales</span><em>month to date</em></div><div class="b"><div class="big">46.6m<small>PKR</small></div><span class="up">+6.2%</span> vs Oct · today 1.9m</div></div>
+  <div class="m"><div class="tab"><span>Sales tax</span><em>payable</em></div><div class="b"><div class="big">4.81m<small>PKR</small></div>Return due 18 Dec · <b>31 days</b></div></div>
+  <div class="m"><div class="tab"><span>Cash &amp; bank</span><em>today</em></div><div class="b"><div class="big">12.9m<small>PKR</small></div><span class="down">−1.6m</span> salaries paid</div></div>
+  <div class="m"><div class="tab"><span>Receivables</span><em>total</em></div><div class="b"><div class="big">21.3m<small>PKR</small></div><span class="down">1.6m</span> over 90 days</div></div>
+  <div class="m w2"><div class="tab"><span>Sales by day</span><em>PKR m · 1–17 Nov · red = today</em></div><div class="b">
+    <div class="bars"><i class="s" style="height:10%"></i><i style="height:88%"></i><i style="height:76%"></i><i style="height:71%"></i><i style="height:83%"></i><i style="height:93%"></i><i style="height:54%"></i><i class="s" style="height:7%"></i><i style="height:85%"></i><i style="height:80%"></i><i style="height:100%"></i><i style="height:78%"></i><i style="height:95%"></i><i style="height:63%"></i><i class="s" style="height:12%"></i><i style="height:95%"></i><i class="t" style="height:46%"></i></div>
+    <div class="lbl"><span>1 Nov</span><span>8</span><span>15</span><span>17</span></div></div></div>
+  <div class="m"><div class="tab"><span>FBR queue</span><em>November</em></div><div class="b"><table>
+    <tr><td>Posted</td><td class="n up">128</td></tr><tr><td>Waiting</td><td class="n wait">14</td></tr><tr><td>Rejected<span class="badge down">fix</span></td><td class="n down">3</td></tr><tr><td>Drafts</td><td class="n">22</td></tr></table></div></div>
+  <div class="m"><div class="tab"><span>Banks</span><em>balances</em></div><div class="b"><table>
+    <tr><td>HBL main</td><td class="n">6,214,900</td></tr><tr><td>Meezan</td><td class="n">4,102,500</td></tr><tr><td>MCB</td><td class="n">1,889,000</td></tr><tr><td>Cash in hand</td><td class="n">700,000</td></tr></table></div></div>
+  <div class="m"><div class="tab"><span>Ageing</span><em>receivables, PKR m</em></div><div class="b">
+    <div class="age"><i style="width:46%;background:#111"></i><i style="width:34%;background:#666"></i><i style="width:12%;background:#A05F00"></i><i style="width:8%;background:var(--red)"></i></div>
+    <table><tr><td>0–30</td><td class="n">9.8</td></tr><tr><td>31–60</td><td class="n">7.3</td></tr><tr><td>61–90</td><td class="n wait">2.6</td></tr><tr><td>90+</td><td class="n down">1.6</td></tr></table></div></div>
+  <div class="m"><div class="tab"><span>Top buyers</span><em>Nov, PKR m</em></div><div class="b"><table>
+    <tr><td>Al-Noor Textiles</td><td class="n">8.4</td></tr><tr><td>Mehran Foods</td><td class="n">6.1</td></tr><tr><td>Indus Pharma</td><td class="n">4.9</td></tr><tr><td>Karachi Steel Works</td><td class="n">3.7</td></tr></table></div></div>
+  <div class="m"><div class="tab"><span>Approvals</span><em>waiting on you</em></div><div class="b"><table>
+    <tr><td>PB-0107 Sitara Chemicals</td><td class="n">734,000</td></tr><tr><td>PB-0106 Packages Ltd</td><td class="n">212,500</td></tr><tr><td>JV-0388 Depreciation Oct</td><td class="n">96,300</td></tr></table></div></div>
+  <div class="m"><div class="tab"><span>Stock alerts</span><em>below reorder</em></div><div class="b"><table>
+    <tr><td>Cotton yarn 30s</td><td class="n down">120 kg</td></tr><tr><td>Dye, reactive blue</td><td class="n down">18 kg</td></tr><tr><td>Cartons, 5-ply</td><td class="n wait">340 pcs</td></tr></table></div></div>
+  <div class="m w2"><div class="tab"><span>Latest documents</span><em>today</em></div><div class="b"><table>
+    <tr><td>INV-2026-0441</td><td>Mehran Foods (Pvt) Ltd</td><td class="n">1,284,600</td><td class="n down">Rejected · NTN inactive</td></tr>
+    <tr><td>RV-2026-0218</td><td>Al-Noor Textiles</td><td class="n">1,500,000</td><td class="n up">Received</td></tr>
+    <tr><td>INV-2026-0440</td><td>Indus Pharma (Pvt) Ltd</td><td class="n">642,300</td><td class="n wait">Waiting</td></tr></table></div></div>
+  <div class="m w2"><div class="tab"><span>Month close</span><em>November checklist</em></div><div class="b"><table>
+    <tr><td>Bank reconciliation, HBL October</td><td class="n wait">Open</td></tr><tr><td>Depreciation JV</td><td class="n up">Posted</td></tr><tr><td>Payroll November</td><td class="n">Due 30 Nov</td></tr></table></div></div>
+</section>
+</body></html>

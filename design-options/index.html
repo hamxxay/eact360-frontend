@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E-ACT 360 design options</title>
+<style>
+:root{--bg:#F4F4F1;--ink:#151515;--ink-2:#5C5C58;--line:#DCDCD6;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);padding:32px 16px 64px}
+.wrap{max-width:1500px;margin:0 auto}
+h1{font-size:30px;letter-spacing:-.01em}
+.lead{color:var(--ink-2);margin:6px 0 10px;max-width:72ch}
+.design{margin-top:36px;padding-top:22px;border-top:1px solid var(--line)}
+.design h2{font-size:21px}
+.design p{color:var(--ink-2);margin:2px 0 14px;max-width:80ch}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:20px}
+a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;color:inherit;text-decoration:none}
+a.card:hover{border-color:var(--ink)}
+a.card:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.frame{position:relative;width:100%;aspect-ratio:1440/900;overflow:hidden;border-bottom:1px solid var(--line)}
+.frame iframe{position:absolute;top:0;left:0;width:1440px;height:900px;border:0;transform-origin:0 0;pointer-events:none}
+.label{padding:10px 16px;font-weight:600}
+</style></head><body><div class="wrap">
+<h1>E-ACT 360 design options</h1>
+<p class="lead">Eight design directions, each shown on two real screens: the dashboard and the FBR digital invoices list. Click a screen to open it at full size; inside, the menu links between that design's two pages. All figures are made-up sample data.</p>
+
+<section class="design"><h2>Closing Rates</h2><p>Business Recorder market page: blue masthead navigation, every figure carries its change since yesterday.</p><div class="pair">
+<a class="card" href="closing-rates/dashboard.html"><div class="frame"><iframe src="closing-rates/dashboard.html" loading="lazy" tabindex="-1" title="Closing Rates dashboard"></iframe></div><div class="label">Dashboard</div></a>
+<a class="card" href="closing-rates/invoices.html"><div class="frame"><iframe src="closing-rates/invoices.html" loading="lazy" tabindex="-1" title="Closing Rates invoices"></iframe></div><div class="label">FBR digital invoices</div></a></div></section>
+
+<section class="design"><h2>Intaglio</h2><p>Banknote engraving: navy menu, guilloche linework behind the key money figure, document numbers in red like serials.</p><div class="pair">
+<a class="card" href="intaglio/dashboard.html"><div class="frame"><iframe src="intaglio/dashboard.html" loading="lazy" tabindex="-1" title="Intaglio dashboard"></iframe></div><div class="label">Dashboard</div></a>
+<a class="card" href="intaglio/invoices.html"><div class="frame"><iframe src="intaglio/invoices.html" loading="lazy" tabindex="-1" title="Intaglio invoices"></iframe></div><div class="label">FBR digital invoices</div></a></div></section>
+
+<section class="design"><h2>Dense Mosaic</h2><p>Japanese high-density layout: small ruled modules under red tabs, everything on one screen.</p><div class="pair">
+<a class="card" href="dense-mosaic/dashboard.html"><div class="frame"><iframe src="dense-mosaic/dashboard.html" loading="lazy" tabindex="-1" title="Dense Mosaic dashboard"></iframe></div><div class="label">Dashboard</div></a>
+<a class="card" href="dense-mosaic/invoices.html"><div class="frame"><iframe src="dense-mosaic/invoices.html" loading="lazy" tabindex="-1" title="Dense Mosaic invoices"></iframe></div><div class="label">FBR digital invoices</div></a></div></section>
+
+<section class="design"><h2>Next Gate</h2><p>Airport wayfinding: one yellow band of next actions with large counts, everything else quiet.</p><div class="pair">
+<a class="card" href="next-gate/dashboard.html"><div class="frame"><iframe src="next-gate/dashboard.html" loading="lazy" tabindex="-1" title="Next Gate dashboard"></iframe></div><div class="label">Dashboard</div></a>
+<a class="card" href="next-gate/invoices.html"><div class="frame"><iframe src="next-gate/invoices.html" loading="lazy" tabindex="-1" title="Next Gate invoices"></iframe></div><div class="label">FBR digital invoices</div></a></div></section>
+
+<section class="design"><h2>Platform Board</h2><p>Pakistan Railways timetable: deep teal shell, a departure board of today's runs and deadlines, changes held in coral.</p><div class="pair">
+<a class="card" href="platform-board/dashboard.html"><div class="frame"><iframe src="platform-board/dashboard.html" loading="lazy" tabindex="-1" title="Platform Board dashboard"></iframe></div><div class="label">Dashboard</div></a>
+<a class="card" href="platform-board/invoices.html"><div class="frame"><iframe src="platform-board/invoices.html" loading="lazy" tabindex="-1" title="Platform Board invoices"></iframe></div><div class="label">FBR digital invoices</div></a></div></section>
+
+<section class="design"><h2>Lal Khata</h2><p>Red cloth ledger: serif figures, credits in red, totals double-ruled.</p><div class="pair">
+<a class="card" href="lal-khata/dashboard.html"><div class="frame"><iframe src="lal-khata/dashboard.html" loading="lazy" tabindex="-1" title="Lal Khata dashboard"></iframe></div><div class="label">Dashboard</div></a>
+<a class="card" href="lal-khata/invoices.html"><div class="frame"><iframe src="lal-khata/invoices.html" loading="lazy" tabindex="-1" title="Lal Khata invoices"></iframe></div><div class="label">FBR digital invoices</div></a></div></section>
+
+<section class="design"><h2>Proof Sheet</h2><p>Printer's proof: hairline grid, registration marks, a periwinkle seal on FBR-verified work.</p><div class="pair">
+<a class="card" href="proof-sheet/dashboard.html"><div class="frame"><iframe src="proof-sheet/dashboard.html" loading="lazy" tabindex="-1" title="Proof Sheet dashboard"></iframe></div><div class="label">Dashboard</div></a>
+<a class="card" href="proof-sheet/invoices.html"><div class="frame"><iframe src="proof-sheet/invoices.html" loading="lazy" tabindex="-1" title="Proof Sheet invoices"></iframe></div><div class="label">FBR digital invoices</div></a></div></section>
+
+<section class="design"><h2>Category standard</h2><p>A clean modern SaaS admin with white cards and one blue accent, for comparison.</p><div class="pair">
+<a class="card" href="standard/dashboard.html"><div class="frame"><iframe src="standard/dashboard.html" loading="lazy" tabindex="-1" title="Standard dashboard"></iframe></div><div class="label">Dashboard</div></a>
+<a class="card" href="standard/invoices.html"><div class="frame"><iframe src="standard/invoices.html" loading="lazy" tabindex="-1" title="Standard invoices"></iframe></div><div class="label">FBR digital invoices</div></a></div></section>
+</div>
+<script>
+function fit(){document.querySelectorAll('.frame').forEach(function(f){var s=f.clientWidth/1440;f.querySelector('iframe').style.transform='scale('+s+')';});}
+window.addEventListener('resize',fit);fit();
+</script>
+</body></html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Category standard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8FAFC;--card:#FFFFFF;--ink:#0F172A;--ink-2:#556274;--line:#E2E8F0;--blue:#2563EB;--blue-bg:#EFF6FF;--ok:#15803D;--ok-bg:#F0FDF4;--wait:#B45309;--wait-bg:#FFFBEB;--bad:#B91C1C;--bad-bg:#FEF2F2}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:14px/1.5 Inter,sans-serif;color:var(--ink);background:var(--bg);display:grid;grid-template-columns:240px 1fr;font-variant-numeric:tabular-nums}
+::selection{background:color-mix(in srgb,var(--blue) 15%,#fff)}
+aside{background:var(--card);border-right:1px solid var(--line);padding:20px 14px;display:flex;flex-direction:column;gap:2px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;padding:0 10px 20px}
+.logo{width:30px;height:30px;border-radius:8px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:11px;font-weight:700}
+aside a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;color:#334155;text-decoration:none;font-weight:500}
+aside a svg{width:18px;height:18px;stroke:#64748B;fill:none;stroke-width:1.8}
+aside a.on{background:var(--blue-bg);color:var(--blue)}aside a.on svg{stroke:var(--blue)}
+.grp{font-size:12px;font-weight:600;color:#64748B;padding:16px 10px 6px}
+.org{margin-top:auto;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px}.org span{display:block;color:var(--ink-2);font-size:12px}
+main{padding:24px 32px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.head{display:flex;align-items:flex-end}
+h1{font-size:26px;font-weight:700;letter-spacing:-.02em}.head p{color:var(--ink-2)}
+.head .sel{margin-left:auto;border:1px solid var(--line);background:var(--card);border-radius:8px;padding:7px 12px;font-weight:500}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.kpi span{color:var(--ink-2);font-weight:500}
+.kpi strong{display:block;font-size:26px;font-weight:700;letter-spacing:-.02em;margin:6px 0 8px}
+.pill{display:inline-block;border-radius:999px;padding:1px 8px;font-size:12px;font-weight:600}
+.p-ok{background:var(--ok-bg);color:var(--ok)}.p-bad{background:var(--bad-bg);color:var(--bad)}.p-wait{background:var(--wait-bg);color:var(--wait)}
+.kpi em{font-style:normal;color:var(--ink-2);font-size:12px;margin-left:6px}
+.row{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.card h2{font-size:15px;font-weight:600;margin-bottom:14px;display:flex}.card h2 small{margin-left:auto;font-weight:500;color:var(--ink-2);font-size:12px}
+.bars{display:flex;align-items:flex-end;gap:8px;height:180px;border-bottom:1px solid var(--line);background:repeating-linear-gradient(to top,transparent 0 44px,#F1F5F9 44px 45px)}
+.bars i{flex:1;background:var(--blue);border-radius:4px 4px 0 0}.bars i.s{background:color-mix(in srgb,var(--blue) 27%,#fff)}.bars i.t{background:color-mix(in srgb,var(--blue) 45%,#fff)}
+.days{display:flex;gap:8px;color:var(--ink-2);font-size:11px;padding-top:6px}.days span{flex:1;text-align:center}
+.st{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #F1F5F9}
+.st b{font-size:18px}
+.alert{margin-top:12px;background:var(--bad-bg);color:var(--bad);border-radius:8px;padding:10px 12px;font-weight:500;font-size:13px}
+.row2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+table{width:100%;border-collapse:collapse}td{padding:7px 0;border-bottom:1px solid #F1F5F9}.n{text-align:right;font-weight:500}
+.track{height:8px;border-radius:4px;background:#F1F5F9;overflow:hidden;margin-top:4px}.track b{display:block;height:100%;background:var(--blue)}
+</style>
+<script src="../palette-switcher.js" data-design="standard"></script></head><body>
+<aside><div class="brand"><div class="logo">360</div>E-ACT 360</div>
+  <a class="on" href="dashboard.html"><svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8M5 10v10h14V10"/></svg>Dashboard</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9h16"/></svg>Sales</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M6 6h15l-2 9H8L6 3H3"/></svg>Purchases</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4zM3 7v10l9 4 9-4V7"/></svg>Inventory</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M4 19V5M10 19V9M16 19v-6M22 19H2"/></svg>Accounts</a>
+  <div class="grp">Compliance</div>
+  <a href="invoices.html"><svg viewBox="0 0 24 24"><path d="M7 3h8l4 4v14H7zM15 3v4h4M10 13l2 2 4-4"/></svg>FBR digital invoices</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M7 3h10v18H7zM10 8h4M10 12h4"/></svg>Provincial invoices</a>
+  <div class="grp">People</div>
+  <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Payroll</a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M6 3h12v18H6zM9 8h6M9 12h6M9 16h3"/></svg>Reports</a>
+  <div class="org">Saffron Textiles (Pvt) Ltd<span>Lahore head office · FY 2026-27</span></div></aside>
+<main>
+  <section class="head"><div><h1>Dashboard</h1><p>Monday 17 November 2026</p></div><span class="sel">Month to date</span></section>
+  <section class="kpis">
+    <div class="card kpi"><span>Sales</span><strong>PKR 46.6m</strong><span class="pill p-ok">+6.2%</span><em>vs October</em></div>
+    <div class="card kpi"><span>Sales tax payable</span><strong>PKR 4.81m</strong><span class="pill p-wait">Due 18 Dec</span><em>31 days</em></div>
+    <div class="card kpi"><span>Cash and bank</span><strong>PKR 12.9m</strong><span class="pill p-bad">−1.6m</span><em>since yesterday</em></div>
+    <div class="card kpi"><span>Receivables</span><strong>PKR 21.3m</strong><span class="pill p-bad">1.6m</span><em>over 90 days</em></div>
+  </section>
+  <section class="row">
+    <div class="card"><h2>Sales by day <small>PKR millions, 1–17 November</small></h2>
+      <div class="bars"><i class="s" style="height:10%"></i><i style="height:88%"></i><i style="height:76%"></i><i style="height:71%"></i><i style="height:83%"></i><i style="height:93%"></i><i style="height:54%"></i><i class="s" style="height:7%"></i><i style="height:85%"></i><i style="height:80%"></i><i style="height:100%"></i><i style="height:78%"></i><i style="height:95%"></i><i style="height:63%"></i><i class="s" style="height:12%"></i><i style="height:95%"></i><i class="t" style="height:46%"></i></div>
+      <div class="days"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div></div>
+    <div class="card"><h2>FBR digital invoices <small>November</small></h2>
+      <div class="st"><span>Posted</span><b style="color:var(--ok)">128</b></div><div class="st"><span>Waiting</span><b style="color:var(--wait)">14</b></div><div class="st"><span>Rejected</span><b style="color:var(--bad)">3</b></div>
+      <div class="alert">3 invoices need correction before reposting.</div></div>
+  </section>
+  <section class="row2">
+    <div class="card"><h2>Receivables ageing <small>PKR m</small></h2><table>
+      <tr><td>0–30 days<div class="track"><b style="width:46%"></b></div></td><td class="n">9.8</td></tr><tr><td>31–60 days<div class="track"><b style="width:34%"></b></div></td><td class="n">7.3</td></tr><tr><td>Over 60 days<div class="track"><b style="width:20%;background:var(--bad)"></b></div></td><td class="n">4.2</td></tr></table></div>
+    <div class="card"><h2>Top buyers <small>PKR m</small></h2><table><tr><td>Al-Noor Textiles</td><td class="n">8.4</td></tr><tr><td>Mehran Foods (Pvt) Ltd</td><td class="n">6.1</td></tr><tr><td>Indus Pharma (Pvt) Ltd</td><td class="n">4.9</td></tr></table></div>
+    <div class="card"><h2>Needs attention</h2><table><tr><td>Purchase bills to approve</td><td class="n">2</td></tr><tr><td>Bank reconciliation, HBL</td><td class="n">Oct</td></tr><tr><td>Items below reorder level</td><td class="n">3</td></tr></table></div>
+  </section>
+</main>
+</body></html>

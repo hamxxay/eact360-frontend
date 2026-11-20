@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Lal Khata · Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cloth:#7A1F1F;--cloth-2:#8E2A28;--thread:#C9A13B;--ground:#FAF8F5;--sheet:#FFFFFF;--ink:#1E1B18;--ink-2:#5C544C;--rule:#E7E1D8;--ok:#2E6B4F;--wait:#8A5A00;--red:#A3271F}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:14px/1.5 'Public Sans',sans-serif;color:var(--ink);background:var(--ground);display:grid;grid-template-columns:240px 1fr;font-variant-numeric:tabular-nums}
+::selection{background:color-mix(in srgb,var(--thread) 27%,var(--ground))}
+.rail{background:var(--cloth);color:#F6E9E4;padding:26px 16px;display:flex;flex-direction:column;position:relative}
+.rail:after{content:"";position:absolute;top:0;bottom:0;right:14px;width:1px;background:var(--thread);opacity:.7}
+.brand{font:700 25px/1 'Source Serif 4',serif;color:#fff;padding:0 10px 4px}.tag{font-size:12px;color:color-mix(in srgb,var(--cloth-2) 29%,var(--ground));padding:0 10px 26px}
+.rail a{display:block;padding:9px 10px;margin-right:18px;border-radius:6px;color:color-mix(in srgb,var(--cloth-2) 15%,var(--ground));text-decoration:none;font-weight:500}
+.rail a.on{background:var(--cloth-2);color:#fff;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--thread) 55%,transparent)}
+.grp{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:color-mix(in srgb,var(--cloth-2) 31%,var(--ground));padding:20px 10px 6px}
+.rail .foot{margin-top:auto;padding:14px 10px 0;font-size:12px;color:color-mix(in srgb,var(--cloth-2) 29%,var(--ground));border-top:1px solid color-mix(in srgb,var(--cloth-2) 95%,var(--rule));margin-right:18px}
+main{display:flex;flex-direction:column;min-width:0}
+.top{height:60px;display:flex;align-items:center;gap:26px;padding:0 36px;border-bottom:1px solid var(--rule)}
+.top .co{font-weight:600}.top .meta{color:var(--ink-2)}
+.search{margin-left:auto;width:300px;height:36px;border:1px solid var(--rule);background:var(--sheet);border-radius:6px;display:flex;align-items:center;padding:0 12px;color:var(--ink-2)}
+.me{width:34px;height:34px;border-radius:50%;background:var(--cloth);color:#fff;display:grid;place-items:center;font-weight:600;font-size:13px}
+.head{display:flex;align-items:flex-end;padding:28px 36px 18px}
+h1{font:600 36px/1.05 'Source Serif 4',serif;letter-spacing:-.01em}.head p{color:var(--ink-2);margin-top:8px}
+.head .per{margin-left:auto;border:1px solid var(--rule);background:var(--sheet);border-radius:6px;padding:7px 12px;font-weight:500}
+.daybook{margin:0 36px;display:grid;grid-template-columns:repeat(4,1fr);background:var(--sheet);border:1px solid var(--rule);border-radius:10px}
+.daybook div{padding:18px 22px;border-left:1px solid var(--rule)}.daybook div:first-child{border-left:0}
+.daybook span{display:block;color:var(--ink-2);font-size:13px}
+.daybook strong{display:block;font:600 30px/1.15 'Source Serif 4',serif;margin:4px 0}
+.daybook em{font-style:normal;font-size:13px;font-weight:600}
+.ok{color:var(--ok)}.wait{color:var(--wait)}.red{color:var(--red)}
+.row{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin:18px 36px 0}
+.p{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:18px 22px}
+.p h2{font:600 19px 'Source Serif 4',serif;margin-bottom:12px;display:flex;align-items:baseline}.p h2 small{margin-left:auto;font:400 13px 'Public Sans';color:var(--ink-2)}
+.bars{display:flex;align-items:flex-end;gap:8px;height:170px;border-bottom:1px solid var(--ink);background:linear-gradient(#F0EBE4 1px,transparent 1px) 0 0/100% 42px}
+.bars i{flex:1;background:var(--cloth);border-radius:2px 2px 0 0}.bars i.s{background:color-mix(in srgb,var(--cloth-2) 23%,var(--ground))}.bars i.t{background:var(--thread)}
+.days{display:flex;gap:8px;color:var(--ink-2);font-size:11px;padding-top:4px}.days span{flex:1;text-align:center}
+table{width:100%;border-collapse:collapse}td{padding:8px 0;border-bottom:1px solid #F0EBE4}
+.n{text-align:right;font:500 15px 'Source Serif 4',serif}
+tr.total td{border-top:3px double var(--ink);border-bottom:0;font-weight:700}
+.row2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin:18px 36px 0}
+</style>
+<script src="../palette-switcher.js" data-design="lal-khata"></script></head><body>
+<nav class="rail"><div class="brand">E-ACT 360</div><div class="tag">Accounts &amp; FBR compliance</div>
+  <a href="dashboard.html" class="on">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a>
+  <div class="grp">Compliance</div><a href="invoices.html">FBR digital invoices</a><a href="#">Provincial invoices</a><a href="#">Annexure-C</a>
+  <div class="grp">People</div><a href="#">Payroll</a><a href="#">Reports</a>
+  <div class="foot">Saffron Textiles (Pvt) Ltd<br>Lahore head office</div></nav>
+<main>
+  <header class="top"><span class="co">Saffron Textiles (Pvt) Ltd</span><span class="meta">Lahore head office</span><span class="meta">November 2026 · FY 2026-27</span><div class="search">Search invoice, buyer or NTN</div><div class="me">AR</div></header>
+  <section class="head"><div><h1>Dashboard</h1><p>Monday, 17 November 2026</p></div><span class="per">Month to date</span></section>
+  <section class="daybook">
+    <div><span>Sales, month to date</span><strong>PKR 46.6m</strong><em class="ok">Up 6.2% on October</em></div>
+    <div><span>Sales tax payable</span><strong>PKR 4.81m</strong><em>Return due 18 December</em></div>
+    <div><span>Cash and bank</span><strong>PKR 12.9m</strong><em class="red">(1.6m) since yesterday</em></div>
+    <div><span>Receivables</span><strong>PKR 21.3m</strong><em class="wait">1.6m over 90 days</em></div>
+  </section>
+  <section class="row">
+    <div class="p"><h2>Sales by day <small>PKR millions · Sundays light · today highlighted</small></h2>
+      <div class="bars"><i class="s" style="height:10%"></i><i style="height:88%"></i><i style="height:76%"></i><i style="height:71%"></i><i style="height:83%"></i><i style="height:93%"></i><i style="height:54%"></i><i class="s" style="height:7%"></i><i style="height:85%"></i><i style="height:80%"></i><i style="height:100%"></i><i style="height:78%"></i><i style="height:95%"></i><i style="height:63%"></i><i class="s" style="height:12%"></i><i style="height:95%"></i><i class="t" style="height:46%"></i></div>
+      <div class="days"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span></div></div>
+    <div class="p"><h2>Cash book <small>balances today, PKR</small></h2><table>
+      <tr><td>HBL main account</td><td class="n">6,214,900</td></tr><tr><td>Meezan Bank</td><td class="n">4,102,500</td></tr><tr><td>MCB</td><td class="n">1,889,000</td></tr><tr><td>Cash in hand</td><td class="n">700,000</td></tr>
+      <tr class="total"><td>Total</td><td class="n">12,906,400</td></tr></table></div>
+  </section>
+  <section class="row2">
+    <div class="p"><h2>Receivables ageing <small>PKR m</small></h2><table><tr><td>0–30 days</td><td class="n">9.8</td></tr><tr><td>31–60 days</td><td class="n">7.3</td></tr><tr><td>61–90 days</td><td class="n wait">2.6</td></tr><tr><td>Over 90 days</td><td class="n red">1.6</td></tr><tr class="total"><td>Total</td><td class="n">21.3</td></tr></table></div>
+    <div class="p"><h2>FBR invoices <small>November</small></h2><table><tr><td>Posted</td><td class="n ok">128</td></tr><tr><td>Waiting to post</td><td class="n wait">14</td></tr><tr><td>Rejected</td><td class="n red">3</td></tr><tr><td>Drafts</td><td class="n">22</td></tr></table></div>
+    <div class="p"><h2>Needs you <small>4 items</small></h2><table><tr><td>Rejected FBR invoices</td><td class="n red">3</td></tr><tr><td>Purchase bills to approve</td><td class="n">2</td></tr><tr><td>HBL October reconciliation</td><td class="n">1</td></tr><tr><td>Items below reorder level</td><td class="n">3</td></tr></table></div>
+  </section>
+</main>
+</body></html>

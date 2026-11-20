@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Dense Mosaic · FBR digital invoices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111;--ink-2:#5A5A5A;--red:#D7000F;--neg:#D7000F;--line:#D9D9D9;--fill:#F3F3F3;--ok:#0B7A3E;--wait:#A05F00}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:13px/1.4 'Noto Sans',sans-serif;color:var(--ink);background:#fff;font-variant-numeric:tabular-nums}
+::selection{background:color-mix(in srgb,var(--red) 16%,#fff)}
+.nav1{height:44px;background:var(--ink);color:#fff;display:flex;align-items:center;gap:4px;padding:0 20px}
+.nav1 .logo{font-weight:700;font-size:17px;margin-right:18px}.nav1 .logo b{color:color-mix(in srgb,var(--red) 62%,#fff)}
+.nav1 a{color:#ddd;text-decoration:none;padding:6px 10px;font-weight:500}.nav1 a.on{background:var(--red);color:#fff}
+.nav1 .r{margin-left:auto;color:#bbb}
+.nav2{height:34px;background:var(--fill);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:0 20px;color:var(--ink-2)}
+.nav2 b{color:var(--ink)}
+.nav2 .s{margin-left:auto;width:260px;height:24px;border:1px solid var(--line);background:#fff;padding:0 8px;display:flex;align-items:center}
+.grid{display:grid;grid-template-columns:260px 1fr 300px;gap:10px;padding:12px 20px}
+.col{display:flex;flex-direction:column;gap:10px}
+.m{border:1px solid var(--line)}
+.m .tab{display:flex;align-items:center;border-bottom:1px solid var(--line)}
+.m .tab span{background:var(--red);color:#fff;font-weight:700;padding:4px 10px}
+.m .tab em{font-style:normal;color:var(--ink-2);margin-left:auto;padding-right:8px;font-size:12px}
+.m .b{padding:8px 10px}
+.field{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dotted var(--line)}
+.field b{font-weight:500}
+.btn{display:block;text-align:center;padding:7px 0;margin-top:8px;border:1px solid var(--ink);font-weight:700}
+.btn.primary{background:var(--red);border-color:var(--red);color:#fff}
+.counts{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.counts div{padding:6px 0;border-bottom:1px dotted var(--line)}
+.counts strong{display:block;font-size:22px;line-height:1.1}
+.ok{color:var(--ok);font-weight:700}.wait{color:var(--wait);font-weight:700}.bad{color:var(--red);font-weight:700}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-weight:700;background:var(--fill);padding:5px 8px;border-bottom:1px solid var(--line);font-size:12px}
+td{padding:6px 8px;border-bottom:1px dotted var(--line)}
+.n{text-align:right}
+td.inv{font-weight:700}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:0 5px;border:1px solid currentColor}
+tr.sel td{background:#FFF1F2}
+.why{color:var(--ink-2);font-size:12px}
+</style>
+<script src="../palette-switcher.js" data-design="dense-mosaic"></script></head><body>
+<header class="nav1"><span class="logo">E-ACT <b>360</b></span><a href="dashboard.html">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a><a class="on" href="invoices.html">FBR</a><a href="#">Provincial</a><a href="#">Payroll</a><a href="#">Reports</a><span class="r">Saffron Textiles (Pvt) Ltd · Lahore · AR</span></header>
+<div class="nav2"><b>FBR digital invoices</b><span>Mon 17 Nov 2026, 14:00</span><span>Live posting on</span><span>Next run 11:00 done · 15:00 next</span><div class="s">Invoice no, buyer, NTN…</div></div>
+<section class="grid">
+  <div class="col">
+    <div class="m"><div class="tab"><span>Status</span><em>November</em></div><div class="b counts">
+      <div><strong class="ok">128</strong>Posted</div><div><strong class="wait">14</strong>Waiting</div><div><strong class="bad">3</strong>Rejected</div><div><strong>22</strong>Drafts</div></div></div>
+    <div class="m"><div class="tab"><span>Filter</span><em>3 active</em></div><div class="b">
+      <div class="field">Date<b>1–17 Nov 2026</b></div><div class="field">Status<b>All</b></div><div class="field">Buyer<b>Any</b></div><div class="field">Province<b>Punjab</b></div><div class="field">Sale type<b>Goods at standard rate</b></div>
+      <span class="btn">Clear filters</span></div></div>
+    <div class="m"><div class="tab"><span>Actions</span></div><div class="b"><span class="btn primary">Post 14 waiting to FBR</span><span class="btn">New invoice</span><span class="btn">Import from Excel</span><span class="btn">Annexure-C comparison</span></div></div>
+  </div>
+  <div class="m"><div class="tab"><span>Invoices</span><em>167 in period · showing 1–12</em></div>
+    <table><thead><tr><th>Invoice</th><th>Date</th><th>Buyer</th><th>NTN</th><th class="n">Value PKR</th><th class="n">Tax PKR</th><th>FBR</th></tr></thead><tbody>
+      <tr class="sel"><td class="inv">INV-2026-0441</td><td>17 Nov</td><td>Mehran Foods (Pvt) Ltd</td><td>4271093-6</td><td class="n">1,284,600</td><td class="n">231,228</td><td class="bad">Rejected <span class="badge">fix</span></td></tr>
+      <tr><td class="inv">INV-2026-0440</td><td>16 Nov</td><td>Indus Pharma (Pvt) Ltd</td><td>3318520-1</td><td class="n">642,300</td><td class="n">115,614</td><td class="wait">Waiting</td></tr>
+      <tr><td class="inv">INV-2026-0439</td><td>16 Nov</td><td>Shaheen Traders</td><td>1190447-8</td><td class="n">98,400</td><td class="n">17,712</td><td class="ok">Posted</td></tr>
+      <tr><td class="inv">INV-2026-0438</td><td>15 Nov</td><td>Al-Noor Textiles</td><td>2054871-3</td><td class="n">2,410,000</td><td class="n">433,800</td><td class="ok">Posted</td></tr>
+      <tr><td class="inv">INV-2026-0437</td><td>14 Nov</td><td>Zubair &amp; Sons</td><td>0871236-9</td><td class="n">56,250</td><td class="n">10,125</td><td class="ok">Posted</td></tr>
+      <tr><td class="inv">INV-2026-0436</td><td>14 Nov</td><td>Karachi Steel Works</td><td>2290315-4</td><td class="n">875,900</td><td class="n">157,662</td><td class="wait">Waiting</td></tr>
+      <tr><td class="inv">INV-2026-0435</td><td>13 Nov</td><td>Punjab Agro Mills</td><td>1734408-0</td><td class="n">331,180</td><td class="n">59,612</td><td class="ok">Posted</td></tr>
+      <tr><td class="inv">INV-2026-0434</td><td>13 Nov</td><td>Gulberg Electronics</td><td>3906612-2</td><td class="n">1,120,000</td><td class="n">201,600</td><td class="bad">Rejected <span class="badge">fix</span></td></tr>
+      <tr><td class="inv">INV-2026-0433</td><td>12 Nov</td><td>Sitara Chemicals</td><td>0458821-7</td><td class="n">412,900</td><td class="n">74,322</td><td class="ok">Posted</td></tr>
+      <tr><td class="inv">INV-2026-0432</td><td>12 Nov</td><td>Al-Noor Textiles</td><td>2054871-3</td><td class="n">1,960,000</td><td class="n">352,800</td><td class="ok">Posted</td></tr>
+      <tr><td class="inv">INV-2026-0431</td><td>11 Nov</td><td>Mehran Foods (Pvt) Ltd</td><td>4271093-6</td><td class="n">745,300</td><td class="n">134,154</td><td class="ok">Posted</td></tr>
+      <tr><td class="inv">INV-2026-0430</td><td>11 Nov</td><td>Zubair &amp; Sons</td><td>0871236-9</td><td class="n">88,750</td><td class="n">15,975</td><td class="ok">Posted</td></tr>
+    </tbody></table></div>
+  <div class="col">
+    <div class="m"><div class="tab"><span>Selected</span><em>INV-2026-0441</em></div><div class="b">
+      <div class="field">Buyer<b>Mehran Foods (Pvt) Ltd</b></div><div class="field">NTN<b>4271093-6</b></div><div class="field">Value<b>PKR 1,284,600</b></div><div class="field">Sales tax 18%<b>PKR 231,228</b></div>
+      <p class="why" style="margin-top:8px"><b class="bad">FBR response:</b> buyer NTN is not active on the FBR register. Update the buyer or mark as unregistered, then repost.</p>
+      <span class="btn primary">Fix and repost</span></div></div>
+    <div class="m"><div class="tab"><span>Posting log</span><em>today</em></div><div class="b">
+      <div class="field">10:44 INV-0441<b class="bad">Rejected</b></div><div class="field">10:42 INV-0439<b class="ok">Posted</b></div><div class="field">10:39 INV-0438<b class="ok">Posted</b></div><div class="field">09:00 run<b>9 posted</b></div></div></div>
+  </div>
+</section>
+</body></html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>E-ACT 360 · Proof Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ground:#F5F4F6;--sheet:#FBFBFC;--ink:#16181A;--ink-2:#55585D;--hair:#C9C7C4;--hair-2:#E2E0DE;--seal:#5B5FC7;--seal-bg:#DCDDF3;--ok:#2F6F4E;--wait:#8A5D00;--bad:#B23A2A}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1440px;height:900px;overflow:hidden}
+body{font:15px/1.45 'Hanken Grotesk',sans-serif;color:var(--ink);background:radial-gradient(900px 600px at 0 0,#FAF6F5,transparent),radial-gradient(900px 600px at 100% 100%,#EEF3EF,transparent),var(--ground);font-variant-numeric:tabular-nums}
+::selection{background:var(--seal-bg)}
+.mono{font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase}
+.bar{height:64px;display:flex;align-items:center;gap:28px;padding:0 40px;border-bottom:1px solid var(--hair)}
+.bar .brand{font:600 18px 'Hanken Grotesk';letter-spacing:-.01em;text-transform:none}
+.bar .crumb{color:var(--ink-2)}.bar .crumb b{color:var(--ink);font-weight:500}
+.bar .search{margin-left:auto;width:300px;height:36px;border:1px solid var(--hair);display:flex;align-items:center;padding:0 12px;color:var(--ink-2);font-size:14px}
+.bar .me{width:34px;height:34px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;font-size:12px;font-weight:600}
+.wrap{display:grid;grid-template-columns:220px 1fr;height:836px}
+nav{border-right:1px solid var(--hair);padding:26px 0}
+nav .g{padding:0 28px 10px;color:var(--ink-2)}
+nav a{display:block;padding:8px 28px;color:var(--ink);text-decoration:none}
+nav a.on{background:var(--ink);color:#fff}
+nav .gap{height:20px}
+main{padding:30px 40px;min-width:0}
+.head{display:flex;align-items:flex-end;gap:16px}
+h1{font:400 56px/1 'Hanken Grotesk';letter-spacing:-.02em}
+.head p{color:var(--ink-2);margin-top:12px}
+.btns{margin-left:auto;display:flex;gap:10px}
+.btn{height:40px;padding:0 16px;display:flex;align-items:center;border:1px solid var(--ink);background:transparent;color:var(--ink)}
+.btn.primary{background:var(--ink);color:#fff}
+.plates{display:grid;grid-template-columns:repeat(4,1fr);margin-top:26px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.plate{position:relative;padding:20px 22px 18px;border-left:1px solid var(--hair)}
+.plate:first-child{border-left:0}
+.plate:before,.plate:after{content:"+";position:absolute;font:400 14px/1 'JetBrains Mono';color:var(--ink-2)}
+.plate:before{top:-8px;left:-5px}.plate:after{bottom:-8px;left:-5px}
+.plate span{color:var(--ink-2)}
+.plate strong{display:block;font:400 44px/1 'Hanken Grotesk';letter-spacing:-.02em;margin-top:12px}
+.plate small{display:block;color:var(--ink-2);font-size:13px;margin-top:6px}
+.ok{color:var(--ok)}.wait{color:var(--wait)}.bad{color:var(--bad)}
+.filters{display:flex;gap:10px;align-items:center;margin:22px 0 10px}
+.f{height:34px;padding:0 12px;border:1px solid var(--hair);display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink-2)}
+.f b{color:var(--ink);font-weight:500}
+.count{margin-left:auto;color:var(--ink-2)}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:10px 12px;border-bottom:1px solid var(--ink);color:var(--ink-2);font-weight:500}
+td{padding:11px 12px;border-bottom:1px solid var(--hair-2);vertical-align:middle}
+.n{text-align:right}
+td.inv{font:500 13px 'JetBrains Mono';letter-spacing:.02em}
+td.fig{text-align:right;font-weight:500}
+.st{font-weight:600}
+.why{display:block;font-size:12px;font-weight:400;color:var(--ink-2)}
+.sealcell{display:flex;align-items:center;gap:10px}
+.sealcell svg{flex:none}
+</style>
+<script src="../palette-switcher.js" data-design="proof-sheet"></script></head><body>
+<header class="bar"><span class="brand">E-ACT 360</span><span class="mono crumb">Compliance / <b>FBR digital invoices</b></span><span class="mono crumb">Saffron Textiles · Lahore · Nov 2026</span><div class="search">Search invoice, buyer or NTN</div><div class="me">AR</div></header>
+<div class="wrap">
+<nav><div class="mono g">Work</div><a href="dashboard.html">Dashboard</a><a href="#">Sales</a><a href="#">Purchases</a><a href="#">Inventory</a><a href="#">Accounts</a><div class="gap"></div>
+<div class="mono g">Compliance</div><a href="invoices.html" class="on">FBR digital invoices</a><a href="#">Provincial invoices</a><a href="#">Annexure-C</a><div class="gap"></div>
+<div class="mono g">People</div><a href="#">Payroll</a><a href="#">Reports</a></nav>
+<main>
+  <section class="head"><div><h1>Digital invoices</h1><p>Monday 17 November 2026 · live posting to FBR</p></div>
+    <div class="btns"><span class="btn mono">Import</span><span class="btn mono">New invoice</span><span class="btn primary mono">Post 14 to FBR</span></div></section>
+  <section class="plates">
+    <div class="plate"><span class="mono">Posted</span><strong class="ok">128</strong><small>verified by FBR this month</small></div>
+    <div class="plate"><span class="mono">Waiting</span><strong class="wait">14</strong><small>next run at 11:00</small></div>
+    <div class="plate"><span class="mono">Rejected</span><strong class="bad">3</strong><small>need correction</small></div>
+    <div class="plate"><span class="mono">Sales tax</span><strong>4.81m</strong><small>PKR, November to date</small></div>
+  </section>
+  <div class="filters"><span class="f"><span class="mono">Date</span><b>1–17 Nov 2026</b></span><span class="f"><span class="mono">Status</span><b>All</b></span><span class="f"><span class="mono">Buyer</span><b>Any</b></span><span class="count mono">8 of 167</span></div>
+  <table><thead><tr><th class="mono">Invoice</th><th class="mono">Buyer</th><th class="mono">Date</th><th class="mono n">Value PKR</th><th class="mono n">Tax PKR</th><th class="mono">FBR</th></tr></thead><tbody>
+    <tr><td class="inv">INV-2026-0441</td><td>Mehran Foods (Pvt) Ltd</td><td>17 Nov</td><td class="fig">1,284,600</td><td class="fig">231,228</td><td><span class="st bad">Rejected</span><span class="why">Buyer NTN not active</span></td></tr>
+    <tr><td class="inv">INV-2026-0440</td><td>Indus Pharma (Pvt) Ltd</td><td>16 Nov</td><td class="fig">642,300</td><td class="fig">115,614</td><td><span class="st wait">Waiting</span></td></tr>
+    <tr><td class="inv">INV-2026-0439</td><td>Shaheen Traders</td><td>16 Nov</td><td class="fig">98,400</td><td class="fig">17,712</td><td><div class="sealcell">
+      <svg width="40" height="40" viewBox="0 0 40 40"><defs><path id="r1" d="M20 20m-15 0a15 15 0 1 1 30 0a15 15 0 1 1 -30 0"/></defs><circle cx="20" cy="20" r="19" style="fill:var(--seal-bg)"/><circle cx="20" cy="20" r="10" fill="none" style="stroke:var(--seal)"/><text font-family="JetBrains Mono" font-size="5.2" letter-spacing="1" style="fill:var(--seal)"><textPath href="#r1">FBR VERIFIED · 50172-4419 ·</textPath></text></svg>
+      <span class="st ok">Posted</span></div></td></tr>
+    <tr><td class="inv">INV-2026-0438</td><td>Al-Noor Textiles</td><td>15 Nov</td><td class="fig">2,410,000</td><td class="fig">433,800</td><td><div class="sealcell">
+      <svg width="40" height="40" viewBox="0 0 40 40"><defs><path id="r2" d="M20 20m-15 0a15 15 0 1 1 30 0a15 15 0 1 1 -30 0"/></defs><circle cx="20" cy="20" r="19" style="fill:var(--seal-bg)"/><circle cx="20" cy="20" r="10" fill="none" style="stroke:var(--seal)"/><text font-family="JetBrains Mono" font-size="5.2" letter-spacing="1" style="fill:var(--seal)"><textPath href="#r2">FBR VERIFIED · 50172-4402 ·</textPath></text></svg>
+      <span class="st ok">Posted</span></div></td></tr>
+    <tr><td class="inv">INV-2026-0437</td><td>Zubair &amp; Sons</td><td>14 Nov</td><td class="fig">56,250</td><td class="fig">10,125</td><td><div class="sealcell">
+      <svg width="40" height="40" viewBox="0 0 40 40"><defs><path id="r3" d="M20 20m-15 0a15 15 0 1 1 30 0a15 15 0 1 1 -30 0"/></defs><circle cx="20" cy="20" r="19" style="fill:var(--seal-bg)"/><circle cx="20" cy="20" r="10" fill="none" style="stroke:var(--seal)"/><text font-family="JetBrains Mono" font-size="5.2" letter-spacing="1" style="fill:var(--seal)"><textPath href="#r3">FBR VERIFIED · 50172-4388 ·</textPath></text></svg>
+      <span class="st ok">Posted</span></div></td></tr>
+  </tbody></table>
+</main></div>
+</body></html>

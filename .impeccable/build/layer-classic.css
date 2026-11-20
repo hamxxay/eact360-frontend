@@ -1,0 +1,110 @@
+/* ---------- Intaglio layer (same world as the new screens; status colours stay semantic) ---------- */
+/* Classic pages are transparent so the shell's tinted cheque ground shows through the (transparent) frame */
+html[data-eact-shell] .wrapper,
+html[data-eact-shell] .content-wrapper,
+html[data-eact-shell] .right-side { background: transparent !important; }
+html[data-eact-shell] ::selection { background: color-mix(in srgb, var(--accent) 20%, transparent); color: var(--ink); }
+html[data-eact-shell] input,
+html[data-eact-shell] textarea { caret-color: var(--accent); }
+/* Panels: cheque white in one engraved outline, square, quiet paper shadow */
+html[data-eact-shell] .panel,
+html[data-eact-shell] .box,
+html[data-eact-shell] .erp-search-panel,
+html[data-eact-shell] .erp-table {
+  background: var(--card) !important;
+  border: 1px solid var(--panel-line) !important;
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+/* Wrapper panels that only hold panels are frameless (one outline per real panel) */
+html[data-eact-shell] .panel:has(.panel),
+html[data-eact-shell] .box:has(.panel, .box) { background: transparent !important; border-color: transparent !important; box-shadow: none !important; }
+html[data-eact-shell] .panel:has(.panel) > .panel-heading { background: transparent !important; border-bottom: 0 !important; }
+html[data-eact-shell] .modal .panel { box-shadow: none !important; }
+html[data-eact-shell] .modal-content { background: var(--card) !important; border: 1px solid var(--panel-line) !important; border-radius: var(--radius-lg) !important; box-shadow: var(--shadow-float) !important; }
+/* Section heads: engraved capitals over a double rule */
+html[data-eact-shell] .panel > .panel-heading,
+html[data-eact-shell] .box > .box-header {
+  background: transparent !important;
+  border-bottom: 3px double var(--accent) !important;
+  font-family: var(--font-engraved) !important;
+  letter-spacing: .05em;
+  color: var(--accent) !important;
+}
+html[data-eact-shell] .panel > .panel-heading strong,
+html[data-eact-shell] .bootstrap-admin-box-title,
+html[data-eact-shell] .box-title { font-family: var(--font-engraved) !important; font-weight: 700 !important; letter-spacing: .05em; color: var(--accent) !important; }
+html[data-eact-shell] .panel:has(.panel) > .panel-heading { border-bottom: 0 !important; }
+html[data-eact-shell] .panel:has(.panel) > .panel-heading .bootstrap-admin-box-title { font-size: 22px !important; }
+html[data-eact-shell] .panel > .panel-heading > .glyphicon,
+html[data-eact-shell] .panel > .panel-heading > i { color: var(--accent) !important; }
+html[data-eact-shell] .panel > .panel-footer { border-color: var(--line) !important; }
+/* Buttons: solid bank-green primaries, square */
+html[data-eact-shell] .btn-primary,
+html[data-eact-shell] .btn-info,
+html[data-eact-shell] .btn-flat.btn-primary,
+html[data-eact-shell] .btnlogin,
+html[data-eact-shell] a.btn.btn-search,
+html[data-eact-shell] .badge.pointer:has(> .glyphicon-plus, > .fa-plus, > .fa-plus-circle),
+html[data-eact-shell] .panel-heading a > .badge:has(> .glyphicon-plus, > .fa-plus, > .fa-plus-circle) {
+  background: var(--accent) !important;
+  border: 1px solid var(--accent) !important;
+  color: var(--on-accent) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: none !important;
+}
+html[data-eact-shell] .btn-primary:hover,
+html[data-eact-shell] .btn-info:hover,
+html[data-eact-shell] a.btn.btn-search:hover,
+html[data-eact-shell] .badge.pointer:has(> .glyphicon-plus, > .fa-plus, > .fa-plus-circle):hover,
+html[data-eact-shell] .panel-heading a > .badge:has(> .glyphicon-plus, > .fa-plus, > .fa-plus-circle):hover { background: var(--accent-hover) !important; border-color: var(--accent-hover) !important; }
+/* Controls: one ink border, green focus ring */
+html[data-eact-shell] .form-control,
+html[data-eact-shell] input[type=text],
+html[data-eact-shell] input[type=number],
+html[data-eact-shell] input[type=email],
+html[data-eact-shell] input[type=password],
+html[data-eact-shell] input[type=date],
+html[data-eact-shell] textarea,
+html[data-eact-shell] select,
+html[data-eact-shell] .select2-container .select2-selection--single,
+html[data-eact-shell] .select2-container .select2-selection--multiple,
+html[data-eact-shell] .select2-container .select2-choice,
+html[data-eact-shell] .input-group-addon,
+html[data-eact-shell] .btn-default,
+html[data-eact-shell] .dt-button,
+html[data-eact-shell] .dt-buttons .btn,
+html[data-eact-shell] .dataTables_wrapper .dataTables_filter input { border-color: var(--control-line) !important; }
+html[data-eact-shell] .form-control:hover:not(:focus):not([disabled]):not([readonly]),
+html[data-eact-shell] .btn-default:hover,
+html[data-eact-shell] .dt-button:hover:not(.disabled) { border-color: var(--control-line-hover) !important; }
+html[data-eact-shell] .form-control:focus,
+html[data-eact-shell] input:focus,
+html[data-eact-shell] textarea:focus,
+html[data-eact-shell] select:focus,
+html[data-eact-shell] .select2-container--default.select2-container--focus .select2-selection,
+html[data-eact-shell] .select2-container--default.select2-container--open .select2-selection { border-color: var(--accent) !important; box-shadow: 0 0 0 3px var(--focus-ring) !important; }
+html[data-eact-shell] .has-error .form-control,
+html[data-eact-shell] .form-control.error,
+html[data-eact-shell] .requiredtxt.error { border-color: var(--void) !important; }
+/* Ledger tables: header band ruled in ink, figures in navy */
+html[data-eact-shell] .table > thead > tr > th,
+html[data-eact-shell] table.dataTable thead th { background: var(--tbl-head-bg) !important; border-bottom: 1px solid var(--accent) !important; }
+html[data-eact-shell] .table .e-num,
+html[data-eact-shell] table.dataTable .e-num { color: var(--figure) !important; font-variant-numeric: tabular-nums lining-nums; }
+html[data-eact-shell] .pagination > .active > a,
+html[data-eact-shell] .pagination > .active > span,
+html[data-eact-shell] .dataTables_wrapper .dataTables_paginate .paginate_button.current { background: var(--accent) !important; border-color: var(--accent) !important; color: var(--on-accent) !important; border-radius: var(--radius) !important; }
+/* Status labels: ruled stamps */
+html[data-eact-shell] .label,
+html[data-eact-shell] .badge:not(.pointer) {
+  background: transparent !important;
+  border: 1px solid currentColor !important;
+  border-radius: 2px !important;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: 11px !important;
+}
+html[data-eact-shell] .label-danger,
+html[data-eact-shell] .badge-danger { color: var(--void) !important; }
+/* @eact:classic:end */
